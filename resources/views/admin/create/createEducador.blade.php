@@ -117,7 +117,7 @@
                                     <div class="uk-width-medium-2-5">
                                         <p>
 
-                                                {!! Form::radio('sexo', 'H', null,['id'=>'radio_demo_1','data-md-icheck'=>'']) !!}
+                                                {!! Form::radio('sexo', 'H', null,['id'=>'radio_demo_1','data-md-icheck'=>'','checked']) !!}
                                             {{--<input type="radio" name="radio_demo" id="radio_demo_1" data-md-icheck />--}}
                                             <label for="radio_demo_1" class="inline-label">Hombre</label>
                                         </p>

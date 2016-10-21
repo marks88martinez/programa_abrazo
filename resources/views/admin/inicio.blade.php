@@ -142,7 +142,7 @@
                         </div>
                     </li>
                     <li data-uk-dropdown="{mode:'click'}">
-                        <a href="#" class="user_action_image"><img class="md-user-image" src="assets/img/avatars/avatar_11_tn.png" alt=""/></a>
+                        <a href="#" class="user_action_image"><img class="md-user-image" src="{{URL::to('assets/img/avatars/avatar_11_tn.png')}}" alt=""/></a>
                         <div class="uk-dropdown uk-dropdown-small uk-dropdown-flip">
                             <ul class="uk-nav js-uk-prevent">
                                 <li><a href="page_user_profile.html">My profile</a></li>
@@ -168,7 +168,7 @@
 <aside id="sidebar_main">
     <a href="#" class="uk-close sidebar_main_close_button"></a>
     <div class="sidebar_main_header">
-        <div class="sidebar_logo"><a href="{{URL::to('/inicio')}}"><img src="assets/img/logo.jpg" alt="" height="15" width="71"/></a></div>
+        <div class="sidebar_logo"><a href="{{URL::to('/inicio')}}"><img src="{{URL::to('assets/img/logo.jpg')}}" alt="" height="15" width="71"/></a></div>
         {{--<div class="sidebar_actions">--}}
             {{--<select id="lang_switcher" name="lang_switcher">--}}
                 {{--<option value="gb" selected>English</option>--}}
@@ -386,7 +386,7 @@
                 <div class="timeline_content">
                     Added photo
                     <div class="timeline_content_addon">
-                        <img src="assets/img/gallery/Image16.jpg" alt=""/>
+                        <img src="{{URL::to('assets/img/gallery/Image16.jpg')}}" alt=""/>
                     </div>
                 </div>
             </div>
@@ -415,7 +415,7 @@
                         <ul class="md-list md-list-addon">
                             <li>
                                 <div class="md-list-addon-element">
-                                    <img class="md-user-image md-list-addon-avatar" src="assets/img/avatars/avatar_02_tn.png" alt=""/>
+                                    <img class="md-user-image md-list-addon-avatar" src="{{URL::to('assets/img/avatars/avatar_02_tn.png')}}" alt=""/>
                                 </div>
                                 <div class="md-list-content">
                                     <span class="md-list-heading">Amie Upton</span>
@@ -499,7 +499,7 @@
 
 <!--  forms advanced functions -->
 <script src="{{URL::to('assets/js/pages/forms_advanced.min.js')}}"></script>
-
+@yield('js')
 
 <!-- enable hires images -->
 <script>

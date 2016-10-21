@@ -8,6 +8,7 @@ use App\responsable;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Session;
 
 class ControllerEducador extends Controller
@@ -43,31 +44,33 @@ class ControllerEducador extends Controller
     public function store(Request $request)
     {
 //        dd($request);
+        DB::transaction(function() use ($request){
+            $dpersona = datos_persona::create([
+                'nombre'=>$request['nombre'],
+                'apellido'=>$request['apellido'],
+                'ci'=>$request['ci'],
+                'fechanacimiento'=>$request['fechanacimiento'],
+                'telefono'=>$request['telefono'],
+                'tipo_cargo'=>$request['tipo_cargo'],
+                'email'=>$request['email'],
+                'password'=>encrypt($request['password']),
+                'direccion'=>$request['direccion'],
+                'sexo'=>$request['sexo']
 
-        $dpersona = datos_persona::create([
-            'nombre'=>$request['nombre'],
-            'apellido'=>$request['apellido'],
-            'ci'=>$request['ci'],
-            'fechanacimiento'=>$request['fechanacimiento'],
-            'telefono'=>$request['telefono'],
-            'tipo_cargo'=>$request['tipo_cargo'],
-            'email'=>$request['email'],
-            'password'=>encrypt($request['password']),
-            'direccion'=>$request['direccion'],
-            'sexo'=>$request['sexo']
-
-        ]);
-
-        if ($request->tipo_cargo == 2)
-        {
-            educador::create([
-                'id_datos_persona'=>$dpersona->id_datos_persona
             ]);
-        }elseif ($request->tipo_cargo == 1){
-            responsable::create([
-                'php'=>$dpersona->id_datos_persona
-            ]);
-        }
+
+            if ($request->tipo_cargo == 2)
+            {
+                educador::create([
+                    'id_datos_persona'=>$dpersona->id_datos_persona
+                ]);
+            }elseif ($request->tipo_cargo == 1){
+                responsable::create([
+                    'id_datos_persona'=>$dpersona->id_datos_persona
+                ]);
+            }
+
+        });
 
 
         Session::flash('message',' Registrado');

@@ -4,7 +4,7 @@
 
     <div class="md-card">
         <div class="md-card-content">
-            {!! Form::open(['route'=>'educador.store', 'method'=>'POST']) !!}
+            {!! Form::model($datos,['route'=>['educador.update',$datos->id_datos_persona], 'method'=>'PUT']) !!}
 
 
             <h3 class="heading_a">Educador</h3>
@@ -12,7 +12,7 @@
                 <div class="uk-width-row">
                     <div class="uk-form-row">
                         <div class="md-input-wrapper"><label>Nombre:</label>
-                            {!!Form::text('nombre',null,['class'=>'md-input','required'])  !!}
+                            {!!Form::text('nombre',$datos->nombre,['class'=>'md-input','required'])  !!}
 
 
                             <span class="md-input-bar"></span></div>
@@ -286,3 +286,19 @@
 
 
 @stop
+
+
+@section('js')
+    <script >
+//        $(document).ready(function(){
+            $('.uk-width-row input').each(function(){
+                if( $(this).val().length != 0 ) {
+                    $(this).parent().addClass('md-input-filled');
+
+                }
+
+            })
+
+//        })
+    </script>
+    @stop

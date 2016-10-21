@@ -2,11 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\datos_persona;
 use App\responsable;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\educador;
+use Illuminate\Support\Facades\Session;
 
 class ControllerListadoEducador extends Controller
 {
@@ -68,7 +70,8 @@ class ControllerListadoEducador extends Controller
      */
     public function edit($id)
     {
-        //
+        $datos = datos_persona::find($id);
+        return view('admin.edit.editEducador',['datos'=>$datos]);
     }
 
     /**
@@ -91,6 +94,9 @@ class ControllerListadoEducador extends Controller
      */
     public function destroy($id)
     {
-        //
+
+        datos_persona::where('id_datos_persona','=',$id)->update(array('estado'=>2));
+      Session::flash('message-error','eliminado');
+        return redirect('listado');
     }
 }
