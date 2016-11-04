@@ -4,7 +4,7 @@
 
     <div class="md-card">
         <div class="md-card-content">
-            {!! Form::model($datos,['route'=>['educador.update',$datos->id_datos_persona], 'method'=>'PUT']) !!}
+            {!! Form::model($datos,['route'=>['listado.update', $datos], 'method'=>'PUT']) !!}
 
 
             <h3 class="heading_a">Educador</h3>
@@ -107,7 +107,7 @@
 
                     <div class="uk-form-row">
                         <div class="md-input-wrapper"><label>Passsword:</label>
-                            {!! Form::password('password', ['class'=>'md-input','required']) !!}
+                            {!! Form::password('password', ['class'=>'md-input']) !!}
                             <span class="md-input-bar"></span></div>
 
                     </div>

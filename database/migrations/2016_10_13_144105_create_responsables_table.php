@@ -14,8 +14,11 @@ class CreateResponsablesTable extends Migration
     {
         Schema::create('responsable', function (Blueprint $table) {
             $table->integer('id_datos_persona', false, true);
-
             $table->timestamps();
+        });
+
+        Schema::table('responsable', function (Blueprint $table) {
+            $table->primary('id_datos_persona');
         });
     }
 

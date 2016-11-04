@@ -224,6 +224,13 @@ $(function() {
                 idle: function() {
                     var e = $("#gmap_markers").find(".dropdown.gmap_controls").find("select");
                     e && !e.hasClass("data-md-selectize") && (e.addClass("data-md-selectize"), altair_forms.select_elements())
+                },
+                click: function(m, e) {
+                    if(!mapClickHandler || !setMarker) {
+                        throw new Error('mapClickHandler y/o setMarker no implementados');
+                    }
+                    mapClickHandler(e.latLng);
+                    setMarker(m, e.latLng);
                 }
             }
         }).Load()

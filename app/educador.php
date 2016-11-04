@@ -8,8 +8,12 @@ class educador extends Model
 {
     protected  $table = 'educador';
     protected $primaryKey = 'id_datos_persona';
-    protected $fillable = ['id_datos_persona'];
+    protected $fillable = ['id_datos_persona','id_responsable'];
     public $timestamps = true;
+
+    public function educador(){
+        return $this->hasOne('App\fuente_calle','id_datos_persona','ideducador');
+    }
 
     public function datos_persona(){
         return $this->belongsTo('App\datos_persona', 'id_datos_persona','id_datos_persona');

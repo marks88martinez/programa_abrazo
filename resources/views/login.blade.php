@@ -21,7 +21,8 @@
 
 </head>
 <body class="login_page">
-
+@include('admin.alert.success')
+@include('admin.alert.error')
 <div class="login_page_wrapper">
     <div class="md-card" id="login_card">
         <div class="md-card-content large-padding" id="login_form">
@@ -29,26 +30,30 @@
                 <div class="user_avatar"></div>
             </div>
 
-            {{--{!! Form::open(['route'=>'home.store', 'method'=>'POST']) !!}--}}
+            {!! Form::open(['route'=>'log.store', 'method'=>'POST']) !!}
 
-                {{--<div class="uk-form-row">--}}
-                    {{--<label for="login_username">Usuario</label>--}}
-                    {{--<input class="md-input" type="text" id="login_username" name="login_username" />--}}
-                {{--</div>--}}
-                {{--<div class="uk-form-row">--}}
-                    {{--<label for="login_username">Password</label>--}}
+                <div class="uk-form-row">
+                    <label for="login_username">Usuario</label>
+                    {!! Form::email('email',null,['class'=>'md-input']) !!}
+
+                </div>
+                <div class="uk-form-row">
+                    <label for="login_username">Password</label>
+                    {!! Form::password('password',['class'=>'md-input']) !!}
                     {{--<input class="md-input" type="password" id="login_username" name="login_username" />--}}
-                {{--</div>--}}
-                {{--<div class="uk-margin-medium-top">--}}
+                </div>
+                <div class="uk-margin-medium-top">
+
+                    {!! Form::submit('Iniciar',['class'=>'md-btn md-btn-primary md-btn-block md-btn-large']) !!}
                     {{--<button class="md-btn md-btn-primary md-btn-block md-btn-large">Sign In</button>--}}
-                {{--</div>--}}
-                {{--<div class="uk-margin-top">--}}
-                        {{--<span class="icheck-inline">--}}
-                            {{--<input type="checkbox" name="login_page_stay_signed" id="login_page_stay_signed" data-md-icheck />--}}
-                            {{--<label for="login_page_stay_signed" class="inline-label">Stay signed in</label>--}}
-                        {{--</span>--}}
-                {{--</div>--}}
-            {{--{!! Form::close() !!}--}}
+                </div>
+                <div class="uk-margin-top">
+                        <span class="icheck-inline">
+                            <input type="checkbox" name="login_page_stay_signed" id="login_page_stay_signed" data-md-icheck />
+                            <label for="login_page_stay_signed" class="inline-label">Stay signed in</label>
+                        </span>
+                </div>
+            {!! Form::close() !!}
         </div>
         <div class="md-card-content large-padding uk-position-relative" id="login_help" style="display: none">
             <button type="button" class="uk-position-top-right uk-close uk-margin-right uk-margin-top" id="login_help_close"></button>

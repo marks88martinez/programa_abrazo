@@ -2,16 +2,17 @@
 
 namespace App\Http\Controllers;
 
-use App\datos_persona;
+use App\dato_nino;
 use App\educador;
+use App\fuente_calle;
 use App\responsable;
 use Illuminate\Http\Request;
-
+use Auth;
 use App\Http\Requests;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Session;
 
-class ControllerEducador extends Controller
+class ControllerFuenteCalle extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -20,26 +21,31 @@ class ControllerEducador extends Controller
      */
     public function index()
     {
-        $responsables =  responsable::with('datos_persona')
+        $dnino = dato_nino::with('datos_persona')
+        ->activa()
+        ->get();
+        $datos = array();
+        $datos['']='';
+        foreach ($dnino as $dninos){
+                $datos[$dninos->datos_persona->id_datos_persona] = $dninos->datos_persona->nombre.' - '.$dninos->datos_persona->ci;
+    }
+
+
+        $responsables = responsable::with('datos_persona')
             ->activa()
             ->get();
-
         $resp = array();
         $resp ['']='';
-
-        foreach ($responsables as $responsable)
-        {
-            $resp [$responsable->datos_persona->id_datos_persona] = $responsable->datos_persona->nombre.' - '.$responsable->datos_persona->ci;
+        foreach ($responsables as $responsable){
+            $resp [$responsable->datos_persona->id_datos_persona] = $responsable->datos_persona->nombre.' - '.$dninos->datos_persona->ci;
         }
 
-        
+
+        $educadora = Auth::user()->nombre;
 
 
 
-
-      $educador = educador::with('datos_persona')->get();
-
-      return view('admin.create.createEducador', compact('resp'));
+            return view('admin.create.fuente_calle',compact('datos','educadora','resp'));
     }
 
     /**
@@ -60,34 +66,26 @@ class ControllerEducador extends Controller
      */
     public function store(Request $request)
     {
-//        dd($request->all());
+
 
         DB::transaction(function() use ($request){
-            $dpersona = datos_persona::create([
-                'nombre'=>$request['nombre'],
-                'apellido'=>$request['apellido'],
-                'ci'=>$request['ci'],
-                'fechanacimiento'=>$request['fechanacimiento'],
-                'telefono'=>$request['telefono'],
-                'tipo_cargo'=>1,
-                'email'=>$request['email'],
-                'password'=>bcrypt($request['password']),
-                'direccion'=>$request['direccion'],
-                'sexo'=>$request['sexo'],
-                'latitud'=>$request['latitud'],
-                'longitud'=>$request['longitud'],
+            fuente_calle::create([
+                'ideducador'=>Auth::user()->id_datos_persona,
+                'centro'=>$request['centro'],
+                'foco'=>$request['foco'],
+                'idhoras_diarias_trabajada'=>null,
+                'procedencia'=>$request['procedencia'],
+                'iddato_nino'=>$request['iddato_nino'],
+                'observacion'=>$request['observacion'],
+
             ]);
-
-                educador::create([
-                    'id_datos_persona'=>$dpersona->id_datos_persona,
-                    'id_responsable'=>$request['id_responsable']
-
-                ]);
         });
 
 
+
+
         Session::flash('message',' Registrado');
-        return redirect('/educador');
+        return redirect('/fuenteCalle');
     }
 
     /**
@@ -135,4 +133,11 @@ class ControllerEducador extends Controller
         //
     }
 
+    public function actividad($id)
+    {
+        $idnino = dato_nino::select('actividad')
+            ->find($id);
+        return is_null($idnino)?'':$idnino->actividad;
+
+    }
 }

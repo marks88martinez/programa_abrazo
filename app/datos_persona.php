@@ -3,8 +3,9 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Foundation\Auth\User as Authenticatable;
 
-class datos_persona extends Model
+class datos_persona extends Authenticatable
 {
     protected $table = 'datos_persona';
     protected $primaryKey = 'id_datos_persona';
@@ -18,7 +19,7 @@ class datos_persona extends Model
         return $this->hasOne('App\responsable','id_datos_persona', 'id_datos_persona');
     }
 
-    public function datos_nino(){
+    public function dato_nino(){
         return $this->hasOne('App\datos_nino','id_datos_persona', 'id_datos_persona');
     }
 

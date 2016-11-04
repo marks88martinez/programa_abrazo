@@ -20,7 +20,7 @@ class CreateUsersTable extends Migration
             $table->date('fechanacimiento');
             $table->double('telefono');
             $table->string('tipo_cargo');
-            $table->string('email')->unique();
+            $table->string('email')->unique()->nullable();
             $table->string('password');
             $table->integer('edad');
             $table->string('longitud');

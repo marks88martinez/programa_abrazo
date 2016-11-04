@@ -12,9 +12,21 @@
 */
 
 Route::resource('/', 'Controlador_inicio');
+Route::resource('/responsable', 'ControllerResponsable');
 Route::resource('/educador', 'ControllerEducador');
+Route::resource('/nino','ControllerNino');
+Route::resource('/fuenteCalle','ControllerFuenteCalle');
+Route::resource('horas_trabajo','ControllerHorasTrabajadas');
 
 Route::resource('/listado','ControllerListadoEducador');
+Route::resource('/listadonino','ControllerListadoNino');
+Route::resource('/listadoFuenteCalle','ControllerListadoFuenteCalle');
+
+
+Route::resource('log', 'LogController');
+Route::get('actividad/{id}','ControllerFuenteCalle@actividad');
+
+
 
 Route::get('/inicio', 'Controlador_inicio@inicio');
 

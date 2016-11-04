@@ -14,6 +14,7 @@ class AddEducadorFk extends Migration
     {
         Schema::table('educador', function (Blueprint $table) {
           $table->foreign('id_datos_persona','educador_datos_personales_fk')->references('id_datos_persona')->on('datos_persona');
+            $table->foreign('id_responsable','educador_responsable_fk')->references('id_datos_persona')->on('responsable');
         });
     }
 
@@ -26,6 +27,7 @@ class AddEducadorFk extends Migration
     {
         Schema::table('educador', function (Blueprint $table) {
           $table->dropForeign('educador_datos_personales_fk');
+          $table->dropForeign('educador_responsable_fk');
         });
     }
 }

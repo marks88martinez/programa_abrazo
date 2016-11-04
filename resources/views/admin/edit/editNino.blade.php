@@ -4,10 +4,11 @@
 
     <div class="md-card">
         <div class="md-card-content">
-            {!! Form::open(['route'=>'educador.store', 'method'=>'POST']) !!}
+
+            {!! Form::model($datos,['route'=>['listadonino.update', $datos],'method'=>'PUT']) !!}
 
 
-            <h3 class="heading_a">Educador</h3>
+            <h3 class="heading_a">Niño</h3>
             <div class="uk-grid" data-uk-grid-margin="">
                 <div class="uk-width-row">
                     <div class="uk-form-row">
@@ -28,7 +29,34 @@
 
                     <div class="uk-form-row">
                         <div class="md-input-wrapper"><label>CI:</label>
-                            {!! Form::text('ci',null, ['class'=>'md-input','required']) !!}
+                            {!! Form::text('ci',null, ['class'=>'md-input']) !!}
+
+                            <span class="md-input-bar"></span></div>
+
+                    </div>
+
+
+                    <div class="uk-form-row">
+                        <div class="md-input-wrapper"><label>Edad:</label>
+                            {!! Form::text('edad',null, ['class'=>'md-input']) !!}
+
+                            <span class="md-input-bar"></span></div>
+
+                    </div>
+
+
+
+                    <div class="uk-form-row">
+                        <div class="md-input-wrapper"><label>Actividad:</label>
+                            {!! Form::text('actividad',null, ['class'=>'md-input']) !!}
+
+                            <span class="md-input-bar"></span></div>
+
+                    </div>
+
+                    <div class="uk-form-row">
+                        <div class="md-input-wrapper"><label>Responsable:</label>
+                            {!! Form::text('responsable',null, ['class'=>'md-input']) !!}
 
                             <span class="md-input-bar"></span></div>
 
@@ -41,7 +69,7 @@
                             <div class="uk-width-medium-1-3">
                                 {{--<span class="uk-input-group-addon"><i class="uk-input-group-icon uk-icon-calendar"></i></span>--}}
                                 <label for="uk_dp_1">fecha de nacimiento:</label>
-                                {!! Form::text('fechanacimiento', null,['class'=>'md-input', 'id'=>'uk-width-medium-1-3', 'data-uk-datepicker'=>'{format:"DD.MM.YYYY"}','required']) !!}
+                                {!! Form::text('fechanacimiento', null,['class'=>'md-input', 'id'=>'uk-width-medium-1-3', 'data-uk-datepicker'=>'{format:"DD.MM.YYYY"}']) !!}
                                 {{--<input class="md-input" type="text" id="uk_dp_1" data-uk-datepicker="{format:'DD.MM.YYYY'}">--}}
 
 
@@ -61,49 +89,17 @@
 
 
 
-                    {{--pimera columna--}}
+
+
+
+
+
                     <div class="uk-form-row">
-                        <div class="uk-grid uk-grid-width-1-1 uk-grid-width-medium-1" data-uk-grid-margin>
-                            <div>
-                                <label for="settings_time_format" class="uk-form-label">Responsable</label>
-                                {!! Form::select('id_responsable', $resp ,null,['data-md-selectize'=>'','id'=>'settings_time_format','required']) !!}
-                            </div>
-                            {{--<div>--}}
-                            {{--<label for="settings_date_format" class="uk-form-label">CI:</label>--}}
-                            {{--{!!Form::text('nombre',null,['class'=>'md-input','required'])  !!}--}}
-                            {{--</div>--}}
-                        </div>
-                    </div>
-                    {{--fin primera columna--}}
-
-
-                    {{--<div class="uk-form-row">--}}
                       {{-- ACA SELEC--}}
 
 
-                        {{--<h3 class="heading_a">Cargo</h3>--}}
-                        {{--<div class="uk-grid" data-uk-grid-margin>--}}
-                            {{--<div class="uk-width-row">--}}
-                                {{--{!! Form::select('tipo_cargo', array('1' => 'Responsable', '2' => 'Educador'),null,['data-md-selectize'=>'','id'=>'select_demo_1']) !!}--}}
 
-                            {{--</div>--}}
 
-                        {{--</div>--}}
-
-                    {{--</div>--}}
-
-                    <div class="uk-form-row">
-                        <div class="md-input-wrapper"><label>Email:</label>
-                            {!! Form::email('email',null, ['class'=>'md-input','required']) !!}
-
-                            <span class="md-input-bar"></span></div>
-
-                    </div>
-
-                    <div class="uk-form-row">
-                        <div class="md-input-wrapper"><label>Passsword:</label>
-                            {!! Form::password('password', ['class'=>'md-input','required']) !!}
-                            <span class="md-input-bar"></span></div>
 
                     </div>
 
@@ -292,7 +288,7 @@
 
 
     @stop
-@section('js')
+@section('js2')
     <script>
         var markers = [];
         function mapClickHandler(latLng) {
@@ -322,3 +318,20 @@
         }
     </script>
 @stop
+
+
+@section('js')
+    <script >
+        //        $(document).ready(function(){
+        $('.uk-width-row input').each(function(){
+            if( $(this).val().length != 0 ) {
+                $(this).parent().addClass('md-input-filled');
+
+            }
+
+        })
+
+        //        })
+    </script>
+@stop
+

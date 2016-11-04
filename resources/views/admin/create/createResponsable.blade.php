@@ -4,10 +4,10 @@
 
     <div class="md-card">
         <div class="md-card-content">
-            {!! Form::open(['route'=>'educador.store', 'method'=>'POST']) !!}
+            {!! Form::open(['route'=>'responsable.store', 'method'=>'POST']) !!}
 
 
-            <h3 class="heading_a">Educador</h3>
+            <h3 class="heading_a">Responsable</h3>
             <div class="uk-grid" data-uk-grid-margin="">
                 <div class="uk-width-row">
                     <div class="uk-form-row">
@@ -61,20 +61,7 @@
 
 
 
-                    {{--pimera columna--}}
-                    <div class="uk-form-row">
-                        <div class="uk-grid uk-grid-width-1-1 uk-grid-width-medium-1" data-uk-grid-margin>
-                            <div>
-                                <label for="settings_time_format" class="uk-form-label">Responsable</label>
-                                {!! Form::select('id_responsable', $resp ,null,['data-md-selectize'=>'','id'=>'settings_time_format','required']) !!}
-                            </div>
-                            {{--<div>--}}
-                            {{--<label for="settings_date_format" class="uk-form-label">CI:</label>--}}
-                            {{--{!!Form::text('nombre',null,['class'=>'md-input','required'])  !!}--}}
-                            {{--</div>--}}
-                        </div>
-                    </div>
-                    {{--fin primera columna--}}
+
 
 
                     {{--<div class="uk-form-row">--}}

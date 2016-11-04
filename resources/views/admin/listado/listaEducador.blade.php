@@ -14,6 +14,7 @@
                         <li class="uk-active"><a href="#">Educador</a></li>
                         <li><a href="#">Responsable</a></li>
 
+
                     </ul>
                     <ul id="tabs_anim1" class="uk-switcher uk-margin">
                         <li>
@@ -72,7 +73,28 @@
                                         </tbody>
 
                                     </table>
+
+                                    <ul class="uk-pagination uk-margin-medium-top uk-margin-medium-bottom">
+
+                                        {!! with(new App\Page\CustomPagination($educadores))->render() !!}
+                                    {{--{{ $educadores->render() }}--}}
+
+                                    </ul>
                                 </div>
+
+
+                                {{--<ul class="uk-pagination uk-margin-medium-top uk-margin-medium-bottom">--}}
+                                    {{--<li class="uk-disabled"><span><i class="uk-icon-angle-double-left"></i></span></li>--}}
+                                    {{--<li class="uk-active"><span>1</span></li>--}}
+                                    {{--<li><a href="#">2</a></li>--}}
+                                    {{--<li><a href="#">3</a></li>--}}
+                                    {{--<li><a href="#">4</a></li>--}}
+                                    {{--<li><span>…</span></li>--}}
+                                    {{--<li><a href="#">20</a></li>--}}
+                                    {{--<li><a href="#"><i class="uk-icon-angle-double-right"></i></a></li>--}}
+                                {{--</ul>--}}
+
+
                             </div>
 
 
@@ -112,12 +134,15 @@
                                                 <td>{{$educador->datos_persona->direccion}}</td>
                                                 <td>
                                                     <div class="uk-width-medium-1-6">
-                                                        <a class="md-btn md-btn-primary" href="#">Editar</a>
+                                                        <a> {!! link_to_route('listado.edit', $title = 'Editar', $parameters = $educador->datos_persona->id_datos_persona, $attributes = ['class'=>'md-btn md-btn-primary']) !!}</a>
                                                     </div>
                                                 </td>
                                                 <td>
                                                     <div class="uk-width-medium-1-6">
-                                                        <a class="md-btn md-btn-danger" href="#">Eliminar</a>
+                                                        {!!Form::open(['route'=>['listado.destroy',$educador->datos_persona->id_datos_persona], 'method'=>'DELETE'])!!}
+
+                                                        {!! Form::submit('Eliminar ',['class'=>'md-btn md-btn-danger']) !!}
+                                                        {!!Form::close()!!}
                                                     </div>
                                                 </td>
                                             </tr>
@@ -129,6 +154,14 @@
                             </div>
                             {{--fin_tabla--}}
                         </li>
+
+
+
+
+
+
+
+
                     </ul>
                 </div>
             </div>

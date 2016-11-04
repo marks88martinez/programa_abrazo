@@ -2,16 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\dato_nino;
-use App\datos_persona;
-use App\responsable;
+use App\fuente_calle;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
-use App\educador;
-use Illuminate\Support\Facades\Session;
 
-class ControllerListadoEducador extends Controller
+class ControllerListadoFuenteCalle extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -20,15 +16,14 @@ class ControllerListadoEducador extends Controller
      */
     public function index()
     {
+        $ninofuente = fuente_calle::with('educador')
+        ->get();
 
-        $educadores = educador::with('datos_persona')
-            ->activa()
-            ->paginate(2);
-        $responsable = responsable::with('datos_persona')
-            ->activa()
-            ->get();
 
-        return view('admin.listado.listaEducador', compact('educadores','responsable'));
+
+        return view('admin.listado.listaFuenteCalle', compact('ninofuente'));
+
+
     }
 
     /**
@@ -71,8 +66,7 @@ class ControllerListadoEducador extends Controller
      */
     public function edit($id)
     {
-        $datos = datos_persona::find($id);
-        return view('admin.edit.editEducador',['datos'=>$datos]);
+        //
     }
 
     /**
@@ -84,31 +78,7 @@ class ControllerListadoEducador extends Controller
      */
     public function update(Request $request, $id)
     {
-
-
-        $productos = datos_persona::find($id);
-        $productos->fill($request->all());
-        $productos->save();
-
-        if ($request->tipo_cargo == 2)
-        {
-            educador::create([
-                'id_datos_persona'=>$productos->id_datos_persona
-            ]);
-            $resp = responsable::find($id);
-            $resp->delete();
-        }elseif ($request->tipo_cargo == 1){
-            responsable::create([
-                'id_datos_persona'=>$productos->id_datos_persona
-            ]);
-            $edu = educador::find($id);
-            $edu->delete();
-        }
-
-
-
-        Session::flash('message','Actualizado');
-        return redirect('listado');
+        //
     }
 
     /**
@@ -119,9 +89,6 @@ class ControllerListadoEducador extends Controller
      */
     public function destroy($id)
     {
-
-        datos_persona::where('id_datos_persona','=',$id)->update(array('estado'=>2));
-      Session::flash('message-error','Eliminado');
-        return redirect('listado');
+        //
     }
 }

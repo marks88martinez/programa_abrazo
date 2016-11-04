@@ -15,7 +15,12 @@ class CreateDatoNinosTable extends Migration
         Schema::create('dato_nino', function (Blueprint $table) {
             $table->integer('id_datos_persona',false, true);
             $table->string('actividad');
+            $table->string('responsable');
             $table->timestamps();
+        });
+
+        Schema::table('dato_nino', function (Blueprint $table) {
+            $table->primary('id_datos_persona');
         });
     }
 

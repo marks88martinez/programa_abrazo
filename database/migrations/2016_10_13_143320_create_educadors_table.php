@@ -14,9 +14,13 @@ class CreateEducadorsTable extends Migration
     {
         Schema::create('educador', function (Blueprint $table) {
             $table->integer('id_datos_persona', false, true);
-
-
+            $table->integer('id_responsable', false, true);
             $table->timestamps();
+
+        });
+
+        Schema::table('educador', function (Blueprint $table) {
+            $table->primary('id_datos_persona');
         });
     }
 

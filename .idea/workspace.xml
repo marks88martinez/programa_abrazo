@@ -1,7 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8e7eb7e6-3cf4-462f-933a-cbe1e1aa1770" name="Default" comment="" />
+    <list default="true" id="8e7eb7e6-3cf4-462f-933a-cbe1e1aa1770" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Page/CustomPagination.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/admin/create/createNino.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/admin/create/createResponsable.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/admin/create/fuente_calle.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/admin/create/horas_trabajadas.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/admin/edit/editNino.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/admin/listado/listaFuenteCalle.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/admin/listado/listaNino.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/admin/listado/listadoFuenteCalle.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Controlador_inicio.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Controlador_inicio.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/ControllerEducador.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/ControllerEducador.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/ControllerListadoEducador.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/ControllerListadoEducador.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/routes.php" afterPath="$PROJECT_DIR$/app/Http/routes.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/User.php" afterPath="$PROJECT_DIR$/app/User.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/dato_nino.php" afterPath="$PROJECT_DIR$/app/dato_nino.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/datos_persona.php" afterPath="$PROJECT_DIR$/app/datos_persona.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/educador.php" afterPath="$PROJECT_DIR$/app/educador.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/fuente_calle.php" afterPath="$PROJECT_DIR$/app/fuente_calle.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/auth.php" afterPath="$PROJECT_DIR$/config/auth.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2016_10_13_143320_create_educadors_table.php" afterPath="$PROJECT_DIR$/database/migrations/2016_10_13_143320_create_educadors_table.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2016_10_13_144105_create_responsables_table.php" afterPath="$PROJECT_DIR$/database/migrations/2016_10_13_144105_create_responsables_table.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2016_10_13_144135_create_dato_ninos_table.php" afterPath="$PROJECT_DIR$/database/migrations/2016_10_13_144135_create_dato_ninos_table.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2016_10_13_180902_add_educador_fk.php" afterPath="$PROJECT_DIR$/database/migrations/2016_10_13_180902_add_educador_fk.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2016_10_14_002459_create_fuente_calles_table.php" afterPath="$PROJECT_DIR$/database/migrations/2016_10_14_002459_create_fuente_calles_table.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2016_10_14_010947_add_fuente_calles.php" afterPath="$PROJECT_DIR$/database/migrations/2016_10_14_010947_add_fuente_calles.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/js/pages/plugins_google_maps.js" afterPath="$PROJECT_DIR$/public/assets/js/pages/plugins_google_maps.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/create/createEducador.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/create/createEducador.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/edit/editEducador.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/edit/editEducador.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/inicio.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/inicio.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/listado/listaEducador.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/listado/listaEducador.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/login.blade.php" afterPath="$PROJECT_DIR$/resources/views/login.blade.php" />
+    </list>
     <ignored path="Project_SG.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -15,73 +50,35 @@
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
+  <component name="DatabaseView">
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_TABLE_DETAILS" value="true" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+  </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
     <favorites_list name="Project_SG" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="inicio.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/admin/inicio.blade.php">
+      <file leaf-file-name="ControllerFuenteCalle.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ControllerFuenteCalle.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="501" column="12" selection-start-line="501" selection-start-column="12" selection-end-line="501" selection-end-column="12" />
+            <state relative-caret-position="342">
+              <caret line="47" column="50" selection-start-line="47" selection-start-column="25" selection-end-line="47" selection-end-column="50" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="datos_persona.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/datos_persona.php">
+      <file leaf-file-name="ControllerHorasTrabajadas.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ControllerHorasTrabajadas.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="311">
-              <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="educador.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/educador.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="20" column="5" selection-start-line="16" selection-start-column="3" selection-end-line="20" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="createEducador.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/admin/create/createEducador.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="119" column="133" selection-start-line="119" selection-start-column="133" selection-end-line="119" selection-end-column="133" />
-              <folding>
-                <marker date="1477066547999" expanded="false" signature="7088:7096" ph="..." />
-                <marker date="1477066547999" expanded="true" signature="9853:9861" ph="…" />
-                <marker date="1477066547999" expanded="false" signature="11686:11710" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ControllerListadoEducador.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ControllerListadoEducador.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
-              <caret line="97" column="46" selection-start-line="97" selection-start-column="30" selection-end-line="97" selection-end-column="46" />
-              <folding>
-                <element signature="e#40#62#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="editEducador.blade.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/views/admin/edit/editEducador.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
-              <caret line="295" column="62" selection-start-line="295" selection-start-column="62" selection-end-line="295" selection-end-column="62" />
+            <state relative-caret-position="162">
+              <caret line="38" column="19" selection-start-line="38" selection-start-column="19" selection-end-line="38" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -90,38 +87,78 @@
       <file leaf-file-name="routes.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="16" column="56" selection-start-line="16" selection-start-column="56" selection-end-line="16" selection-end-column="56" />
+            <state relative-caret-position="270">
+              <caret line="24" column="0" selection-start-line="21" selection-start-column="12" selection-end-line="24" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="success.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/admin/alert/success.blade.php">
+      <file leaf-file-name="listaFuenteCalle.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/admin/listado/listaFuenteCalle.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="36">
-              <caret line="2" column="56" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="56" />
+            <state relative-caret-position="-1127">
+              <caret line="51" column="95" selection-start-line="51" selection-start-column="95" selection-end-line="52" selection-end-column="72" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="error.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/admin/alert/error.blade.php">
+      <file leaf-file-name="horas_trabajadas.blade.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/admin/create/horas_trabajadas.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="36">
-              <caret line="2" column="56" selection-start-line="2" selection-start-column="56" selection-end-line="2" selection-end-column="56" />
+            <state relative-caret-position="61">
+              <caret line="157" column="53" selection-start-line="157" selection-start-column="53" selection-end-line="157" selection-end-column="53" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="listaEducador.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/admin/listado/listaEducador.blade.php">
+      <file leaf-file-name="createNino.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/admin/create/createNino.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="51" column="10" selection-start-line="51" selection-start-column="10" selection-end-line="51" selection-end-column="112" />
+            <state relative-caret-position="440">
+              <caret line="89" column="0" selection-start-line="89" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="listadoFuenteCalle.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/admin/listado/listadoFuenteCalle.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="54">
+              <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="createResponsable.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/admin/create/createResponsable.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="49" column="30" selection-start-line="39" selection-start-column="23" selection-end-line="49" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="fuente_calle.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/admin/create/fuente_calle.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-3521">
+              <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ControllerListadoNino.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ControllerListadoNino.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="20" column="46" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="46" />
               <folding />
             </state>
           </provider>
@@ -129,48 +166,63 @@
       </file>
     </leaf>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/.env" />
-        <option value="$PROJECT_DIR$/app/Http/Middleware/Authenticate.php" />
-        <option value="$PROJECT_DIR$/resources/views/auth/login.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Auth/PasswordController.php" />
-        <option value="$PROJECT_DIR$/config/app.php" />
-        <option value="$PROJECT_DIR$/app/Http/Requests/LoginRequest.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2016_10_13_185300_create_fuente_calles_table.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2016_10_13_144135_create_dato_ninos_table.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2016_10_14_002459_create_fuente_calles_table.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2016_10_13_180902_add_educador_fk.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2016_10_13_184102_add_dato_ninos_fk.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2016_10_13_144105_create_responsables_table.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2016_10_13_183115_add_responsable_fk.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2016_10_13_144119_create_centros_table.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2016_10_13_185119_create_zonas_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2016_10_14_001654_create_horas_diarias_trabajadas_table.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" />
-        <option value="$PROJECT_DIR$/resources/views/login.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Controlador_inicio.php" />
         <option value="$PROJECT_DIR$/public/bower_components/uikit/css/uikit.almost-flat.min.css" />
         <option value="$PROJECT_DIR$/public/assets/css/main.min.css" />
-        <option value="$PROJECT_DIR$/app/dato_nino.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2016_10_14_010947_add_fuente_calles.php" />
         <option value="$PROJECT_DIR$/template/forms_advanced.html" />
         <option value="$PROJECT_DIR$/public/assets/js/pages/plugins_google_maps.min.js" />
         <option value="$PROJECT_DIR$/resources/views/admin/alert/success.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/routes.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2016_10_13_143320_create_educadors_table.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" />
-        <option value="$PROJECT_DIR$/app/educador.php" />
-        <option value="$PROJECT_DIR$/app/responsable.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/ControllerEducador.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/alert/error.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/listado/listaEducador.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/ControllerListadoEducador.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/create/createEducador.blade.php" />
-        <option value="$PROJECT_DIR$/app/datos_persona.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/inicio.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/edit/editEducador.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/graficos.blade.php" />
+        <option value="$PROJECT_DIR$/app/Page/CustomPagination.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/create/createNino.blade.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/ControllerNino.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/listado/listaEducador.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/listado/listaNino.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/edit/editNino.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/ControllerListadoNino.php" />
+        <option value="$PROJECT_DIR$/template/index.html" />
+        <option value="$PROJECT_DIR$/resources/views/login.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/LogController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Controlador_inicio.php" />
+        <option value="$PROJECT_DIR$/app/User.php" />
+        <option value="$PROJECT_DIR$/config/auth.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/ControllerListadoEducador.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2016_10_14_002459_create_fuente_calles_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2016_10_14_010947_add_fuente_calles.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2016_10_13_180902_add_educador_fk.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2016_10_13_143320_create_educadors_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2016_10_13_144105_create_responsables_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2016_10_13_144135_create_dato_ninos_table.php" />
+        <option value="$PROJECT_DIR$/database/seeds/ResponsableSeeder.php" />
+        <option value="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/create/createResponsable.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/create/createEducador.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/ControllerEducador.php" />
+        <option value="$PROJECT_DIR$/app/responsable.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/create/fuente_calle.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/inicio.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/ControllerResponsable.php" />
+        <option value="$PROJECT_DIR$/app/educador.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/ControllerListadoFuenteCalle.php" />
+        <option value="$PROJECT_DIR$/app/fuente_calle.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/ControllerFuenteCalle.php" />
+        <option value="$PROJECT_DIR$/app/dato_nino.php" />
+        <option value="$PROJECT_DIR$/app/datos_persona.php" />
+        <option value="$PROJECT_DIR$/app/Http/routes.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/ControllerHorasTrabajadas.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/listado/listadoFuenteCalle.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/listado/listaFuenteCalle.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/create/horas_trabajadas.blade.php" />
       </list>
     </option>
   </component>
@@ -222,6 +274,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -250,6 +303,20 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="storage" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Project_SG" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Project_SG" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="resources" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
@@ -302,7 +369,7 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="edit" />
+              <option name="myItemId" value="listado" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -328,7 +395,7 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="alert" />
+              <option name="myItemId" value="create" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -343,6 +410,56 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Project_SG" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Project_SG" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="database" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Project_SG" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Project_SG" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="database" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="seeds" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Project_SG" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Project_SG" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="database" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="migrations" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -402,19 +519,24 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="/var/www/html/DuoSat" />
+    <property name="last_opened_file_path" value="/var/www/html/ocean_quality" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js-jscs-nodeInterpreter" value="/usr/bin/node" />
-    <property name="SearchEverywhereHistoryKey" value="components_tabs&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/template/components_tabs.html&#10;components_common&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/template/components_common.html&#10;components_notifications&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/template/components_notifications.html&#10;forms_advanced&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/template/forms_advanced.html&#10;ControllerEducador&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/app/Http/Controllers/ControllerEducador.php&#10;plugins_google_maps&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/public/assets/js/pages/plugins_google_maps.min.js&#10;forms_regular&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/template/forms_regular.html&#10;kendoui_masked_input&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/template/kendoui_masked_input.html" />
+    <property name="SearchEverywhereHistoryKey" value="ini&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/resources/views/admin/inicio.blade.php&#10;auth&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/config/auth.php&#10;user.&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/app/User.php&#10;auth.php&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/config/auth.php&#10;kendoui_calendar&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/template/kendoui_calendar.html&#10;plugins_calendar&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/template/plugins_calendar.html&#10;page_settings&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/template/page_settings.html&#10;paginator&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/vendor/laravel/framework/src/Illuminate/Pagination/Paginator.php&#10;pagination&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/resources/lang/en/pagination.php&#10;Pa&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/resources/lang/en/pagination.php&#10;namespace&#9;null&#9;null&#10;Pagination&#9;null&#9;null&#10;plugins_charts&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/template/plugins_charts.html&#10;Controlador_inicio&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/app/Http/Controllers/Controlador_inicio.php&#10;index&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/template/index.html&#10;components_tabs&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/template/components_tabs.html&#10;components_common&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/template/components_common.html&#10;components_notifications&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/template/components_notifications.html&#10;forms_advanced&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/template/forms_advanced.html&#10;ControllerEducador&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/app/Http/Controllers/ControllerEducador.php&#10;plugins_google_maps&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/public/assets/js/pages/plugins_google_maps.min.js&#10;forms_regular&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/template/forms_regular.html&#10;kendoui_masked_input&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/template/kendoui_masked_input.html" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/views/admin/create" />
+      <recent name="$PROJECT_DIR$/resources/views/admin/listado" />
+      <recent name="$PROJECT_DIR$/resources/views/admin/edit" />
       <recent name="$PROJECT_DIR$/public" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/Page" />
     </key>
   </component>
   <component name="RunManager">
@@ -503,36 +625,55 @@
       <workItem from="1477012725547" duration="6000" />
       <workItem from="1477012780975" duration="2593000" />
       <workItem from="1477049895139" duration="160000" />
-      <workItem from="1477050085771" duration="14017000" />
+      <workItem from="1477050085771" duration="18690000" />
+      <workItem from="1477094700077" duration="12740000" />
+      <workItem from="1477225923523" duration="7012000" />
+      <workItem from="1477396768590" duration="17416000" />
+      <workItem from="1477486163154" duration="8416000" />
+      <workItem from="1477502798151" duration="5336000" />
+      <workItem from="1477527601741" duration="2327000" />
+      <workItem from="1477569860078" duration="316000" />
+      <workItem from="1477570209163" duration="9637000" />
+      <workItem from="1477610585541" duration="9411000" />
+      <workItem from="1477653898987" duration="8616000" />
+      <workItem from="1477935535209" duration="1862000" />
+      <workItem from="1478008065555" duration="3942000" />
+      <workItem from="1478018569995" duration="5072000" />
+      <workItem from="1478092059845" duration="11903000" />
+      <workItem from="1478182928242" duration="4162000" />
+      <workItem from="1478192287176" duration="2753000" />
+      <workItem from="1478260642291" duration="5366000" />
+      <workItem from="1478266272634" duration="3136000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="113038000" />
+    <option name="totallyTimeSpent" value="237134000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="49" y="24" width="1317" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2195122" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21636507" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296617" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20987654" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21052632" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Thumbnails" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972136" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.51702785" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -548,370 +689,374 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="2" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/Http/Middleware/VerifyCsrfToken.php">
+    <entry file="file://$PROJECT_DIR$/resources/lang/en/pagination.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" column="60" selection-start-line="9" selection-start-column="51" selection-end-line="9" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Page/CustomPagination.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
-          <caret line="13" column="21" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Requests/Request.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Requests/LoginRequest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="15" column="20" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2016_10_13_143021_create_educador_table.php" />
-    <entry file="file://$PROJECT_DIR$/database/migrations/2016_10_13_185300_create_fuente_calles_table.php" />
-    <entry file="file://$PROJECT_DIR$/database/migrations/2016_10_14_010813_add_fuente_calle.php" />
-    <entry file="file://$PROJECT_DIR$/database/migrations/2014_10_12_100000_create_password_resets_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="11" column="7" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
+          <caret line="34" column="5" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/database/migrations/2016_10_13_184102_add_dato_ninos_fk.php">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/graficos.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2502">
+          <caret line="139" column="26" selection-start-line="139" selection-start-column="26" selection-end-line="139" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/edit/editNino.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="78">
+          <caret line="297" column="0" selection-start-line="297" selection-start-column="0" selection-end-line="297" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ControllerNino.php">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
-          <caret line="15" column="92" selection-start-line="15" selection-start-column="82" selection-end-line="15" selection-end-column="92" />
+          <caret line="49" column="29" selection-start-line="49" selection-start-column="29" selection-end-line="49" selection-end-column="29" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2016_10_13_183115_add_responsable_fk.php">
+    <entry file="file://$PROJECT_DIR$/template/page_settings.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="15" column="93" selection-start-line="15" selection-start-column="81" selection-end-line="15" selection-end-column="93" />
+        <state relative-caret-position="233">
+          <caret line="359" column="38" selection-start-line="330" selection-start-column="26" selection-end-line="359" selection-end-column="38" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2016_10_13_144105_create_responsables_table.php">
+    <entry file="file://$PROJECT_DIR$/template/plugins_calendar.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="15" column="45" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2016_10_13_144135_create_dato_ninos_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="15" column="45" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2016_10_13_180902_add_educador_fk.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2016_10_13_144119_create_centros_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="15" column="41" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2016_10_13_185119_create_zonas_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="15" column="39" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2016_10_14_001654_create_horas_diarias_trabajadas_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="15" column="49" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Controller.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="12" column="26" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/HomeController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="40" column="22" selection-start-line="40" selection-start-column="22" selection-end-line="40" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Controlador_inicio.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/css/main.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="0" column="132190" selection-start-line="0" selection-start-column="132190" selection-end-line="0" selection-end-column="132190" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/bower_components/uikit/css/uikit.almost-flat.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="139">
-          <caret line="1" column="867" selection-start-line="1" selection-start-column="867" selection-end-line="1" selection-end-column="867" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/bower_components/uikit/css/uikit.almost-flat.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-324">
+        <state relative-caret-position="-1566">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/User.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/edit/editEducador.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="463">
+          <caret line="302" column="13" selection-start-line="291" selection-start-column="3" selection-end-line="302" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/fuente_calle.php">
+    <entry file="file://$PROJECT_DIR$/template/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="5580">
+          <caret line="310" column="25" selection-start-line="310" selection-start-column="25" selection-end-line="310" selection-end-column="25" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/horas_diarias_trabajadas.php">
+    <entry file="file://$PROJECT_DIR$/template/kendoui_calendar.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="5868">
+          <caret line="326" column="17" selection-start-line="326" selection-start-column="12" selection-end-line="326" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/dato_nino.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/listado/listaNino.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="47" selection-start-line="9" selection-start-column="47" selection-end-line="9" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/template/kendoui_masked_input.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6570">
-          <caret line="365" column="10" selection-start-line="313" selection-start-column="3" selection-end-line="365" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2016_10_14_002459_create_fuente_calles_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="21" column="54" selection-start-line="21" selection-start-column="29" selection-end-line="21" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2016_10_14_010947_add_fuente_calles.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/template/forms_regular.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="9396">
-          <caret line="522" column="22" selection-start-line="480" selection-start-column="11" selection-end-line="522" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/template/plugins_google_maps.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6264">
-          <caret line="426" column="3" selection-start-line="426" selection-start-column="3" selection-end-line="426" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/app.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3402">
-          <caret line="189" column="1" selection-start-line="189" selection-start-column="1" selection-end-line="189" selection-end-column="1" />
+        <state relative-caret-position="2016">
+          <caret line="112" column="0" selection-start-line="112" selection-start-column="0" selection-end-line="112" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/login.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="900">
-          <caret line="50" column="16" selection-start-line="50" selection-start-column="16" selection-end-line="50" selection-end-column="37" />
+        <state relative-caret-position="18">
+          <caret line="48" column="22" selection-start-line="48" selection-start-column="22" selection-end-line="48" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/template/forms_advanced.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8766">
-          <caret line="487" column="34" selection-start-line="487" selection-start-column="34" selection-end-line="487" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/js/pages/plugins_google_maps.min.js">
+    <entry file="file://$PROJECT_DIR$/app/Http/Requests/LoginRequest.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="70" selection-start-line="0" selection-start-column="70" selection-end-line="0" selection-end-column="70" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/template/components_notifications.html">
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Controlador_inicio.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7326">
-          <caret line="407" column="75" selection-start-line="407" selection-start-column="4" selection-end-line="407" selection-end-column="75" />
+        <state relative-caret-position="282">
+          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/template/components_common.html">
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/LogController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2052">
-          <caret line="114" column="41" selection-start-line="106" selection-start-column="35" selection-end-line="114" selection-end-column="41" />
-          <folding />
+        <state relative-caret-position="480">
+          <caret line="51" column="11" selection-start-line="51" selection-start-column="11" selection-end-line="51" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/auth.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1242">
+          <caret line="69" column="40" selection-start-line="69" selection-start-column="27" selection-end-line="69" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/HomeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="756">
+          <caret line="48" column="45" selection-start-line="48" selection-start-column="45" selection-end-line="48" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ControllerListadoEducador.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="103" column="27" selection-start-line="103" selection-start-column="19" selection-end-line="103" selection-end-column="27" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="29" column="48" selection-start-line="29" selection-start-column="48" selection-end-line="29" selection-end-column="48" />
-          <folding />
+        <state relative-caret-position="90">
+          <caret line="18" column="30" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="30" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/responsable.php">
+    <entry file="file://$PROJECT_DIR$/database/migrations/2016_10_14_002459_create_fuente_calles_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="16" column="53" selection-start-line="16" selection-start-column="53" selection-end-line="16" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2016_10_14_010947_add_fuente_calles.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
-          <caret line="21" column="5" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
-          <folding />
+          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2016_10_13_180902_add_educador_fk.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="16" column="120" selection-start-line="16" selection-start-column="109" selection-end-line="16" selection-end-column="120" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2016_10_13_143320_create_educadors_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="23" column="11" selection-start-line="21" selection-start-column="6" selection-end-line="23" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/seeds/responsableSeeder.php" />
+    <entry file="file://$PROJECT_DIR$/database/seeds/DatabaseSeeder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="14" column="37" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2016_10_13_144105_create_responsables_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="49">
+          <caret line="19" column="34" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2016_10_13_144135_create_dato_ninos_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="21" column="32" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/create/createEducador.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="69" column="34" selection-start-line="69" selection-start-column="34" selection-end-line="69" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/seeds/ResponsableSeeder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="316">
+          <caret line="26" column="13" selection-start-line="24" selection-start-column="9" selection-end-line="26" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/inicio.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3222">
+          <caret line="179" column="77" selection-start-line="179" selection-start-column="77" selection-end-line="179" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ControllerResponsable.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="66" column="0" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ControllerEducador.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="49" column="49" selection-start-line="49" selection-start-column="49" selection-end-line="49" selection-end-column="49" />
-          <folding>
-            <element signature="e#40#62#0#PHP" expanded="false" />
-          </folding>
+        <state relative-caret-position="432">
+          <caret line="31" column="46" selection-start-line="31" selection-start-column="33" selection-end-line="31" selection-end-column="46" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/template/components_tabs.html">
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ControllerListadoFuenteCalle.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="503" column="18" selection-start-line="453" selection-start-column="12" selection-end-line="503" selection-end-column="18" />
+        <state relative-caret-position="360">
+          <caret line="23" column="63" selection-start-line="23" selection-start-column="63" selection-end-line="23" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/responsable.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="15" column="65" selection-start-line="15" selection-start-column="65" selection-end-line="15" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/fuente_calle.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="21" column="60" selection-start-line="21" selection-start-column="60" selection-end-line="21" selection-end-column="60" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/educador.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="20" column="5" selection-start-line="16" selection-start-column="3" selection-end-line="20" selection-end-column="5" />
+        <state relative-caret-position="252">
+          <caret line="14" column="78" selection-start-line="14" selection-start-column="68" selection-end-line="14" selection-end-column="78" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/alert/success.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/dato_nino.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="56" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/alert/error.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="56" selection-start-line="2" selection-start-column="56" selection-end-line="2" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2016_10_13_143320_create_educadors_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="20" column="5" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/listado/listaEducador.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="51" column="10" selection-start-line="51" selection-start-column="10" selection-end-line="51" selection-end-column="112" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ControllerListadoEducador.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="97" column="46" selection-start-line="97" selection-start-column="30" selection-end-line="97" selection-end-column="46" />
-          <folding>
-            <element signature="e#40#62#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="16" column="56" selection-start-line="16" selection-start-column="56" selection-end-line="16" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/create/createEducador.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="119" column="133" selection-start-line="119" selection-start-column="133" selection-end-line="119" selection-end-column="133" />
-          <folding>
-            <marker date="1477066547999" expanded="false" signature="7088:7096" ph="..." />
-            <marker date="1477066547999" expanded="true" signature="9853:9861" ph="…" />
-            <marker date="1477066547999" expanded="false" signature="11686:11710" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/inicio.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="501" column="12" selection-start-line="501" selection-start-column="12" selection-end-line="501" selection-end-column="12" />
+        <state relative-caret-position="396">
+          <caret line="22" column="11" selection-start-line="22" selection-start-column="11" selection-end-line="22" selection-end-column="11" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/datos_persona.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+        <state relative-caret-position="360">
+          <caret line="21" column="24" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/edit/editEducador.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ControllerListadoNino.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="295" column="62" selection-start-line="295" selection-start-column="62" selection-end-line="295" selection-end-column="62" />
+        <state relative-caret-position="270">
+          <caret line="20" column="46" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ControllerFuenteCalle.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="47" column="50" selection-start-line="47" selection-start-column="25" selection-end-line="47" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="24" column="0" selection-start-line="21" selection-start-column="12" selection-end-line="24" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ControllerHorasTrabajadas.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="38" column="19" selection-start-line="38" selection-start-column="19" selection-end-line="38" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/create/createResponsable.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="49" column="30" selection-start-line="39" selection-start-column="23" selection-end-line="49" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/listado/listaEducador.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="377">
+          <caret line="171" column="10" selection-start-line="4" selection-start-column="0" selection-end-line="171" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/create/createNino.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="89" column="0" selection-start-line="89" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/listado/listadoFuenteCalle.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/listado/listaFuenteCalle.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1127">
+          <caret line="51" column="95" selection-start-line="51" selection-start-column="95" selection-end-line="52" selection-end-column="72" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/create/fuente_calle.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3521">
+          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/create/horas_trabajadas.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="61">
+          <caret line="157" column="53" selection-start-line="157" selection-start-column="53" selection-end-line="157" selection-end-column="53" />
           <folding />
         </state>
       </provider>

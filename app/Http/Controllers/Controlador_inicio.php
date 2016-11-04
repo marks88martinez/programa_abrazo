@@ -22,7 +22,8 @@ class Controlador_inicio extends Controller
 //        dd($ver);
     }
     public function inicio(){
-        return view('admin.inicio');
+
+        return view('admin.graficos');
     }
 
 }
