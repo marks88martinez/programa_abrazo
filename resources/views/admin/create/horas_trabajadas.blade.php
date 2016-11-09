@@ -7,7 +7,7 @@
             {!! Form::open(['route'=>'horas_trabajo.store', 'method'=>'POST']) !!}
 
 
-            <h3 class="heading_a"><strong>HORAS TRABAJADAS</strong></h3>
+            <h3 class="heading_a"><strong>HORAS TRABAJADAS de {!! $ninofuente->dato_nino->datos_persona->nombre !!}</strong></h3>
 
             <div class="uk-grid" data-uk-grid-margin="">
 
@@ -15,7 +15,15 @@
                 <div class="uk-width-medium-1-3">
 
 
-
+                    {{--$ninofuente--}}
+                    {!!Form::hidden('id',$ninofuente->id_fuente_calle,['class'=>'md-input ','id'=>'actividad'])  !!}
+                    {{--pimera columna--}}
+                    {{--<div class="uk-form-row">--}}
+                        {{--<div class="md-input-wrapper md-input-filled"><label>id:</label>--}}
+                            {{--{!!Form::hidden('id',$ninofuente->id_fuente_calle,['class'=>'md-input ','id'=>'actividad'])  !!}--}}
+                            {{--<span class="md-input-bar"></span></div>--}}
+                    {{--</div>--}}
+                    {{--fin primera columna--}}
 
 
                     {{--pimera columna--}}
@@ -120,12 +128,59 @@
     {{--////////////////lista/////////////////--}}
 
 
+    {{--//////////////////////////////////////////--}}
+
+    <div class="md-card">
+        <div class="md-card-content">
+            <h3 class="heading_a"><strong>Promedio de Horas Trabajadas: {!! number_format($promedio,2) !!}</strong></h3><br>
+
+            {!! Form::open(['route'=>['horas_trabajo.edit',$ninofuente->id_fuente_calle], 'method'=>'GET']) !!}
+
+    <div class="uk-grid" data-uk-grid-margin="">
+        <div class="uk-width-medium-1-3">
+            <div class="uk-form-row">
+                <label for="uk_dp_1">fecha de inicio:</label>
+                {!! Form::text('fechainicio', $finicio,['class'=>'md-input', 'id'=>'uk-width-medium-1-3', 'data-uk-datepicker'=>'{format:"DD.MM.YYYY"}','required']) !!}
+                {{--<input class="md-input" type="text" id="uk_dp_1" data-uk-datepicker="{format:'DD.MM.YYYY'}">--}}
+
+            </div>
+
+        </div>
+
+
+        {{-- division--}}
+        <div class="uk-width-medium-1-3">
+            <div class="uk-form-row">
+                <label for="uk_dp_1">fecha de inicio:</label>
+                {!! Form::text('fechafin', $ffin,['class'=>'md-input', 'id'=>'uk-width-medium-1-3', 'data-uk-datepicker'=>'{format:"DD.MM.YYYY"}','required']) !!}
+                {{--<input class="md-input" type="text" id="uk_dp_1" data-uk-datepicker="{format:'DD.MM.YYYY'}">--}}
+
+
+
+            </div>
+
+        </div>
+
+        {{--division--}}
+        <div class="uk-width-medium-1-3">
+            <div class="uk-form-row">
+                {!! Form::submit('Promedio',['class'=>'md-btn md-btn-success']) !!}
+
+            </div>
+
+        </div>
 
 
 
 
 
+    </div>
 
+
+            {!! Form::close() !!}
+
+        </div>
+    </div>
 
     {{--/////////////////////////////////////--}}
 
@@ -153,47 +208,34 @@
                                     <table class="uk-table uk-table-hover">
                                         <thead>
                                         <tr>
-                                            <th>Nombre </th>
+
                                             <th>Horas</th>
                                             <th>fecha</th>
                                             <th></th>
-                                            <th></th>
+
 
                                         </tr>
                                         </thead>
 
                                         <tbody>
-                                        {{--@foreach( $nino as $educador)--}}
-                                        {{--<tr>--}}
-                                        {{--<td>{{$educador->datos_persona->nombre}}</td>--}}
-                                        {{--<td>{{$educador->datos_persona->apellido}}</td>--}}
-                                        {{--<td>{{$educador->datos_persona->fechanacimiento}}</td>--}}
-                                        {{--<td>{{$educador->actividad}}</td>--}}
-                                        {{--<td>{{$educador->responsable}}</td>--}}
-                                        {{--<td>{{$educador->datos_persona->telefono}}td>--}}
 
-                                        {{--<td>{{$educador->datos_persona->direccion}}</td>--}}
-                                        {{--<td>--}}
-                                        {{--<div class="uk-width-medium-1-6">--}}
-                                        {{--<a class="md-btn md-btn-primary" href="#">Editar</a>--}}
-                                        {{--aca--}}
-                                        {{--<a> {!! link_to_route('listadonino.edit', $title = 'Editar', $parameters = $educador->datos_persona->id_datos_persona, $attributes = ['class'=>'md-btn md-btn-primary']) !!}</a>--}}
-                                        {{--aca--}}
+                                            @foreach( $hora as $horas)
+                                            <tr>
+                                            <td>{{$horas->horas}}</td>
+                                            <td>{{$horas->fecha}}</td>
 
-                                        {{--</div>--}}
-                                        {{--</td>--}}
-                                        {{--<td>--}}
-                                        {{--<div class="uk-width-medium-1-6">--}}
-                                        {{--<a class="md-btn md-btn-danger" href="#">Eliminar</a>--}}
+                                            <td>
+                                            <div class="uk-width-medium-1-6">
+                                            {{--<a class="md-btn md-btn-danger" href="#">Eliminar</a>--}}
 
-                                        {{--{!!Form::open(['route'=>['listadonino.destroy',$educador->datos_persona->id_datos_persona], 'method'=>'DELETE'])!!}--}}
+                                            {!!Form::open(['route'=>['horas_trabajo.destroy',$horas->id_hora_trabajada], 'method'=>'DELETE'])!!}
 
-                                        {{--{!! Form::submit('Eliminar ',['class'=>'md-btn md-btn-danger']) !!}--}}
-                                        {{--{!!Form::close()!!}--}}
-                                        {{--</div>--}}
-                                        {{--</td>--}}
-                                        {{--</tr>--}}
-                                        {{--@endforeach--}}
+                                            {!! Form::submit('Eliminar ',['class'=>'md-btn md-btn-danger']) !!}
+                                            {!!Form::close()!!}
+                                            </div>
+                                            </td>
+                                            </tr>
+                                            @endforeach
 
                                         </tbody>
 
@@ -201,7 +243,7 @@
 
                                     <ul class="uk-pagination uk-margin-medium-top uk-margin-medium-bottom">
 
-                                        {{--{!! with(new App\Page\CustomPagination($educadores))->render() !!}--}}
+                                        {!! with(new App\Page\CustomPagination($hora))->render() !!}
                                         {{--{{ $educadores->render() }}--}}
 
                                     </ul>

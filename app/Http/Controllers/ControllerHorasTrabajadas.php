@@ -2,9 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use App\fuente_calle;
+
+use App\horas_diarias_trabajado;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\Session;
 
 class ControllerHorasTrabajadas extends Controller
 {
@@ -15,7 +21,9 @@ class ControllerHorasTrabajadas extends Controller
      */
     public function index()
     {
-        return view('admin.create.horas_trabajadas');
+
+
+
     }
 
     /**
@@ -23,9 +31,10 @@ class ControllerHorasTrabajadas extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
-        //
+        dd($request);
+
     }
 
     /**
@@ -36,7 +45,17 @@ class ControllerHorasTrabajadas extends Controller
      */
     public function store(Request $request)
     {
-        dd($request);
+//        dd($request);
+       DB::transaction(function() use ($request){
+        horas_diarias_trabajado::create([
+            'id_fuente_calle'=>$request['id'],
+            'horas'=>$request['Horas'],
+            'fecha'=>$request['fechaTrabajo']
+        ]);
+    });
+
+
+        return Redirect::back()->with('message','registrado correctamente');
     }
 
     /**
@@ -56,9 +75,30 @@ class ControllerHorasTrabajadas extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Request $request, $id )
     {
-        //
+        $ninofuente = fuente_calle::with('educador')
+            ->find($id);
+
+       $hora =  horas_diarias_trabajado::select('id_hora_trabajada','id_fuente_calle','horas','fecha')
+           ->where('id_fuente_calle','=',$id);
+
+
+
+        $promedio =  horas_diarias_trabajado::where('id_fuente_calle','=',$id);
+
+        if ($request->has('fechainicio') && $request->has('fechafin')){
+            $hora = $hora->whereBetween('fecha',[$request->fechainicio ,$request->fechafin]);
+
+            $promedio = $promedio->whereBetween('fecha',[$request->fechainicio ,$request->fechafin]);;
+        }
+
+        $hora = $hora->paginate(10);
+        $promedio = $promedio->avg('horas');
+
+        $finicio = $request->fechainicio;
+        $ffin = $request->fechafin;
+        return view('admin.create.horas_trabajadas', compact('ninofuente', 'hora', 'promedio','finicio','ffin'));
     }
 
     /**

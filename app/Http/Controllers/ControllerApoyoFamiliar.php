@@ -2,14 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use App\create_apoyo_familiar;
 use Illuminate\Http\Request;
-use App\Http\Requests\LoginRequest;
-use Auth;
-use Redirect;
-use Session;
-use App\Http\Requests;
 
-class LogController extends Controller
+use App\Http\Requests;
+use Auth;
+use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\Session;
+
+class ControllerApoyoFamiliar extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -18,7 +19,9 @@ class LogController extends Controller
      */
     public function index()
     {
-        //
+
+        $educadora = Auth::user()->nombre;
+        return view('admin.create.apoyoFamiliar', compact('educadora'));
     }
 
     /**
@@ -40,17 +43,21 @@ class LogController extends Controller
     public function store(Request $request)
     {
 //        dd($request);
-
-        if(Auth::attempt(['email'=> $request['email'], 'password'=>$request['password']])){
-            return Redirect::to('/inicio');
-        }
-        Session::flash('message-error', 'Datos incorrectos');
-        return Redirect::to('/');
-    }
-
-    public function logout(){
-        Auth::logout();
-        return Redirect::to('/');
+        create_apoyo_familiar::create([
+            'id_educador'=>Auth::user()->id_datos_persona,
+            'centro'=>$request['centro'],
+            'nombre_titular'=>$request['nombretitular'],
+            'domicilio'=>$request['domicilio'],
+            'visita_numero'=>$request['visita'],
+            'etapa_seguimiento'=>$request['etapa'],
+            'dimensiones_t'=>$request['Dimension'],
+            'Descripción'=>$request['descrip'],
+            'resultados'=>$request['resultados'],
+            'acuerdos'=>$request['acuerdos'],
+            'proxima_visita'=>$request['pvisita']
+        ]);
+//        Session::flash('message','registrado correctamente');
+        return Redirect::back()->with('message','registrado correctamente');
 
     }
 

@@ -73,7 +73,6 @@ class ControllerFuenteCalle extends Controller
                 'ideducador'=>Auth::user()->id_datos_persona,
                 'centro'=>$request['centro'],
                 'foco'=>$request['foco'],
-                'idhoras_diarias_trabajada'=>null,
                 'procedencia'=>$request['procedencia'],
                 'iddato_nino'=>$request['iddato_nino'],
                 'observacion'=>$request['observacion'],

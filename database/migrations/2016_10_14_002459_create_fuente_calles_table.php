@@ -19,7 +19,7 @@ class CreateFuenteCallesTable extends Migration
             $table->text('foco');
             $table->text('procedencia');
             $table->integer('iddato_nino',false,true);
-            $table->integer('idhoras_diarias_trabajada', false, true)->nullable();
+//            $table->integer('idhoras_diarias_trabajada', false, true)->nullable();
             $table->text('observacion');
             $table->timestamps();
         });

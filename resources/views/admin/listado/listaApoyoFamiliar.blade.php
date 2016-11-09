@@ -32,13 +32,16 @@
                                             <th></th>
                                             <th>Educador </th>
                                             <th>Centro</th>
-                                            <th>Foco</th>
-                                            <th>Procedencia</th>
-                                            <th>Niño</th>
-                                            <th>Horas Trabajadas</th>
+                                            <th>Nombre del titular</th>
+                                            <th>Domicilio</th>
+                                            <th>Visita Numero</th>
+                                            <th>Etapa Seguimiento</th>
+                                            <th>Dimesiones Trabajadas</th>
+                                            <th>Descripcion</th>
+                                            <th>Resultado</th>
+                                            <th>Acuerdo</th>
+                                            <th>Proxima Visita</th>
 
-                                            <th>Observacion</th>
-                                            <th></th>
                                             <th></th>
                                             <th></th>
 
@@ -46,28 +49,36 @@
                                         </thead>
 
                                         <tbody>
-                                        @foreach( $ninofuente as $nino)
+
+
+                                        @foreach( $apoyo as $apoyos)
                                             <tr>
-                                                {{--<td>{{$nino->educador->datos_persona}}</td>--}}
-                                                <td>{{$nino->id_fuente_calle}}</td>
-                                                <td>{{$nino->educador->datos_persona->nombre}}</td>
-                                                <td>{{$nino->centro?'Pdte Franco':'Ciudad del este'}}</td>
-                                                <td>{{$nino->foco}}</td>
-                                                <td>{{$nino->procedencia}}</td>
-                                                <td>{{$nino->dato_nino->datos_persona->nombre}}</td>
-                                                <td><strong>{{$nino->idhoras_diarias_trabajada? $nino->idhoras_diarias_trabajada :'Adicionar Horario'}}</strong></td>
-                                                <td>{{$nino->observacion}}</td>
+                                                <td>{{$apoyos->id_apoyo_familiars}}</td>
+                                                <td>{{$apoyos->educadores->datos_persona->nombre}}</td>
+                                                {{--<td>{{$apoyos->educador->datos_persona->nombre}}</td>--}}
+                                                <td>{{$apoyos->centro?'Pdte Franco':'Ciudad del este'}}</td>
+                                                <td>{{$apoyos->nombre_titular}}</td>
+                                                <td>{{$apoyos->domicilio}}</td>
+                                                <td>{{$apoyos->visita_numero}}</td>
+                                                <td>{!! $etapa[$apoyos->etapa_seguimiento] !!}</td>
+                                                <td>{!! $dimension[$apoyos->dimensiones_t] !!}</td>
+
+                                                <td>{{$apoyos->Descripción}}</td>
+                                                <td>{{$apoyos->resultados}}</td>
+                                                <td>{{$apoyos->acuerdos}}</td>
+                                                <td>{{$apoyos->proxima_visita}}</td>
+
 
 
                                                 {{--<td>{{$educador->datos_persona->direccion}}</td>--}}
-                                                <td>
-                                                    <div class="uk-width-medium-1-6">
+                                                {{--<td>--}}
+                                                    {{--<div class="uk-width-medium-1-6">--}}
                                                         {{--<a class="md-btn md-btn-warning" href="{{URL::to('/horas_trabajo')}}"> h/trabajos</a>--}}
 
-                                                        <a> {!! link_to_route('horas_trabajo.edit', $title = ' H/Trabajos', $parameters = $nino->id_fuente_calle, $attributes = ['class'=>'md-btn md-btn-warning']) !!}</a>
+                                                        {{--<a> {!! link_to_route('horas_trabajo.edit', $title = ' H/Trabajos', $parameters = $nino->id_fuente_calle, $attributes = ['class'=>'md-btn md-btn-warning']) !!}</a>--}}
 
-                                                    </div>
-                                                </td>
+                                                    {{--</div>--}}
+                                                {{--</td>--}}
                                                 <td>
                                                     <div class="uk-width-medium-1-6">
                                                         <a class="md-btn md-btn-primary" href="#">Editar</a>

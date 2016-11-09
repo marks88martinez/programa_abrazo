@@ -60,7 +60,7 @@
                             <ul class="uk-nav js-uk-prevent">
                                 {{--<li><a href="page_user_profile.html">My profile</a></li>--}}
                                 {{--<li><a href="page_settings.html">Settings</a></li>--}}
-                                <li><a href="login.html">Logout</a></li>
+                                <li><a href="{{ URL::to('logout') }}">Logout</a></li>
                             </ul>
                         </div>
                     </li>
@@ -178,7 +178,8 @@
                 <ul>
                     <li><a href="{{URL::to('/fuenteCalle')}}">Fuente Calle</a></li>
                     <li><a href="{{URL::to('/listadoFuenteCalle')}}">Listado Fuente Calle</a></li>
-
+                    <li><a href="{{URL::to('/apoyofamiliar')}}">Apoyo Familiar</a></li>
+                    <li><a href="{{URL::to('/listadoApoyoFamiliar')}}">listado Apoyo Familiar</a></li>
                 </ul>
             </li>
 
@@ -388,6 +389,15 @@
     })();
 </script>
 
+<script>
+    var donutChart = {
+        title: "Trabajo por dia",
+        columns: [
+            ["Santi", 2],
+            ["Bobo", 50]
+        ]
+    }
+</script>
 
 <!-- inputmask-->
 {{--<script src="{{URL::to('bower_components/jquery.inputmask/dist/jquery.inputmask.bundle.min.js')}}"></script>--}}
@@ -423,8 +433,7 @@
 
 <!--  dashbord functions -->
 <script src="{{URL::to('assets/js/pages/dashboard.min.js')}}"></script>
-
-
+<script src="{{URL::to('assets/js/custom/graficos.js')}}"></script>
 <!-- page specific plugins -->
 <!-- ionrangeslider -->
 <script src="{{URL::to('bower_components/ionrangeslider/js/ion.rangeSlider.min.js')}}"></script>

@@ -150,6 +150,8 @@
 
                                         </tbody>
                                     </table>
+
+
                                 </div>
                             </div>
                             {{--fin_tabla--}}

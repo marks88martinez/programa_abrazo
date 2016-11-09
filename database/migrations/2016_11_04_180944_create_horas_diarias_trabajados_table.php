@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateHorasDiariasTrabajadasTable extends Migration
+class CreateHorasDiariasTrabajadosTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,8 +12,10 @@ class CreateHorasDiariasTrabajadasTable extends Migration
      */
     public function up()
     {
-        Schema::create('horas_diarias_trabajada', function (Blueprint $table) {
+        Schema::create('horas_diarias_trabajado', function (Blueprint $table) {
             $table->increments('id_hora_trabajada');
+            $table->integer('id_fuente_calle',false,true);
+            $table->integer('horas');
             $table->date('fecha');
             $table->timestamps();
         });
@@ -26,6 +28,6 @@ class CreateHorasDiariasTrabajadasTable extends Migration
      */
     public function down()
     {
-        Schema::drop('horas_diarias_trabajada');
+        Schema::drop('horas_diarias_trabajados');
     }
 }

@@ -15,6 +15,10 @@ class educador extends Model
         return $this->hasOne('App\fuente_calle','id_datos_persona','ideducador');
     }
 
+    public function educadores(){
+        return $this->hasOne('App\create_apoyo_familia','id_educador','id_datos_persona');
+    }
+
     public function datos_persona(){
         return $this->belongsTo('App\datos_persona', 'id_datos_persona','id_datos_persona');
     }

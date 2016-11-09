@@ -2,14 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\create_apoyo_familiar;
 use Illuminate\Http\Request;
-use App\Http\Requests\LoginRequest;
-use Auth;
-use Redirect;
-use Session;
+
 use App\Http\Requests;
 
-class LogController extends Controller
+class ControllerListadoApoyoFamiliar extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -18,7 +16,15 @@ class LogController extends Controller
      */
     public function index()
     {
-        //
+        $apoyo = create_apoyo_familiar::with('educadores')
+        ->get();
+//        dd($apoyo);
+
+        $etapa = array('1'=>'1ra Etapa', '2'=>'2da Etapa','3'=>'3ra Etapa');
+        $dimension = array('1'=>'Identificación', '2'=>'Salud','3'=>'Educación','4'=>'Empleo/Ingresos','5'=>'Seguridad AlimentariaSaneamiento Básico','6'=>'Dinámica Familiar','7'=>' Habilitabilidad');
+
+
+        return view('admin.listado.listaApoyoFamiliar', compact('apoyo','etapa','dimension'));
     }
 
     /**
@@ -39,19 +45,7 @@ class LogController extends Controller
      */
     public function store(Request $request)
     {
-//        dd($request);
-
-        if(Auth::attempt(['email'=> $request['email'], 'password'=>$request['password']])){
-            return Redirect::to('/inicio');
-        }
-        Session::flash('message-error', 'Datos incorrectos');
-        return Redirect::to('/');
-    }
-
-    public function logout(){
-        Auth::logout();
-        return Redirect::to('/');
-
+        //
     }
 
     /**

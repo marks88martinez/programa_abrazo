@@ -21,9 +21,14 @@ Route::resource('horas_trabajo','ControllerHorasTrabajadas');
 Route::resource('/listado','ControllerListadoEducador');
 Route::resource('/listadonino','ControllerListadoNino');
 Route::resource('/listadoFuenteCalle','ControllerListadoFuenteCalle');
+Route::resource('/listadoApoyoFamiliar','ControllerListadoApoyoFamiliar');
+
+
+Route::resource('/apoyofamiliar','ControllerApoyoFamiliar');
 
 
 Route::resource('log', 'LogController');
+Route::resource('logout', 'LogController@logout');
 Route::get('actividad/{id}','ControllerFuenteCalle@actividad');
 
 

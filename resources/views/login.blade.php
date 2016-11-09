@@ -27,7 +27,8 @@
     <div class="md-card" id="login_card">
         <div class="md-card-content large-padding" id="login_form">
             <div class="login_heading">
-                <div class="user_avatar"></div>
+                <img src="{{URL::to('assets/img/logo.jpg')}}" alt="">
+                {{--<div class="user_avatar"></div>--}}
             </div>
 
             {!! Form::open(['route'=>'log.store', 'method'=>'POST']) !!}
@@ -47,12 +48,12 @@
                     {!! Form::submit('Iniciar',['class'=>'md-btn md-btn-primary md-btn-block md-btn-large']) !!}
                     {{--<button class="md-btn md-btn-primary md-btn-block md-btn-large">Sign In</button>--}}
                 </div>
-                <div class="uk-margin-top">
-                        <span class="icheck-inline">
-                            <input type="checkbox" name="login_page_stay_signed" id="login_page_stay_signed" data-md-icheck />
-                            <label for="login_page_stay_signed" class="inline-label">Stay signed in</label>
-                        </span>
-                </div>
+                {{--<div class="uk-margin-top">--}}
+                        {{--<span class="icheck-inline">--}}
+                            {{--<input type="checkbox" name="login_page_stay_signed" id="login_page_stay_signed" data-md-icheck />--}}
+                            {{--<label for="login_page_stay_signed" class="inline-label">Stay signed in</label>--}}
+                        {{--</span>--}}
+                {{--</div>--}}
             {!! Form::close() !!}
         </div>
         <div class="md-card-content large-padding uk-position-relative" id="login_help" style="display: none">

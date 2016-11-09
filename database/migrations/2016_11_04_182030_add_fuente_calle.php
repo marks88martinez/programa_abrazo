@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddFuenteCalles extends Migration
+class AddFuenteCalle extends Migration
 {
     /**
      * Run the migrations.
@@ -17,7 +17,7 @@ class AddFuenteCalles extends Migration
 
             $table->foreign('iddato_nino','fuente_calle_dato_nino_fk')->references('id_datos_persona')->on('dato_nino');
 
-            $table->foreign('idhoras_diarias_trabajada','fuente_calle_horas_diarias_trabajada_fk')->references('id_hora_trabajada')->on('horas_diarias_trabajada');
+
         });
     }
 
@@ -32,7 +32,7 @@ class AddFuenteCalles extends Migration
             $table->dropForeign('fuente_calle_educador_fk');
 
             $table->dropForeign('fuente_calle_dato_nino_fk');
-            $table->dropForeign('fuente_calle_horas_diarias_trabajada_fk');
+
         });
     }
 }
