@@ -9,6 +9,8 @@ use App\Http\Requests;
 
 class Controlador_inicio extends Controller
 {
+
+
     public function index(){
 
 

@@ -2,10 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\dato_nino;
+use App\datos_persona;
 use App\fuente_calle;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
+use Auth;
+use Illuminate\Support\Facades\Session;
 
 class ControllerListadoFuenteCalle extends Controller
 {
@@ -66,7 +70,22 @@ class ControllerListadoFuenteCalle extends Controller
      */
     public function edit($id)
     {
-        //
+
+        $dnino = dato_nino::with('datos_persona')
+            ->activa()
+            ->get();
+        $datos = array();
+        $datos['']='';
+        foreach ($dnino as $dninos){
+            $datos[$dninos->datos_persona->id_datos_persona] = $dninos->datos_persona->nombre.' - '.$dninos->datos_persona->ci;
+        }
+
+        $listafuente = fuente_calle::find($id);
+        $user = Auth::user()->nombre;
+
+
+        return view('admin.edit.editfuente_calle',['listafuente'=>$listafuente, 'user'=>$user, 'datos'=>$datos]);
+
     }
 
     /**
@@ -78,7 +97,13 @@ class ControllerListadoFuenteCalle extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+
+        $apoyo = fuente_calle::find($id);
+        $apoyo->fill($request->all());
+        $apoyo->save();
+
+        Session::flash('message','Actualizado');
+        return redirect('listadoFuenteCalle');
     }
 
     /**
@@ -89,6 +114,11 @@ class ControllerListadoFuenteCalle extends Controller
      */
     public function destroy($id)
     {
-        //
+        $apoyo = fuente_calle::find($id);
+        $apoyo->delete();
+
+        datos_persona::where('id_datos_persona','=',$id)->update(array('estado'=>2));
+        Session::flash('message-error','Eliminado');
+        return redirect('listadoFuenteCalle');
     }
 }

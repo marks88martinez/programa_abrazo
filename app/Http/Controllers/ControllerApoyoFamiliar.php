@@ -17,6 +17,11 @@ class ControllerApoyoFamiliar extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    public  $var;
+
+
+
     public function index()
     {
 
@@ -40,21 +45,21 @@ class ControllerApoyoFamiliar extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public  function store(Request $request)
     {
 //        dd($request);
         create_apoyo_familiar::create([
             'id_educador'=>Auth::user()->id_datos_persona,
             'centro'=>$request['centro'],
-            'nombre_titular'=>$request['nombretitular'],
+            'nombre_titular'=>$request['nombre_titular'],
             'domicilio'=>$request['domicilio'],
-            'visita_numero'=>$request['visita'],
-            'etapa_seguimiento'=>$request['etapa'],
-            'dimensiones_t'=>$request['Dimension'],
-            'Descripción'=>$request['descrip'],
+            'visita_numero'=>$request['visita_numero'],
+            'etapa_seguimiento'=>$request['etapa_seguimiento'],
+            'dimensiones_t'=>$request['dimensiones_t'],
+            'Descripción'=>$request['Descripción'],
             'resultados'=>$request['resultados'],
             'acuerdos'=>$request['acuerdos'],
-            'proxima_visita'=>$request['pvisita']
+            'proxima_visita'=>$request['proxima_visita']
         ]);
 //        Session::flash('message','registrado correctamente');
         return Redirect::back()->with('message','registrado correctamente');
@@ -69,7 +74,8 @@ class ControllerApoyoFamiliar extends Controller
      */
     public function show($id)
     {
-        //
+
+
     }
 
     /**
@@ -80,7 +86,10 @@ class ControllerApoyoFamiliar extends Controller
      */
     public function edit($id)
     {
-        //
+        $datos = create_apoyo_familiar::find($id);
+
+
+        return view('admin.edit.editApoyoFamiliar',['datos'=>$datos]);
     }
 
     /**
@@ -92,7 +101,15 @@ class ControllerApoyoFamiliar extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+//        dd($request);
+
+        $apoyo = create_apoyo_familiar::find($id);
+        $apoyo->fill($request->all());
+        $apoyo->save();
+
+        Session::flash('message','Actualizado');
+        return redirect('listadoApoyoFamiliar');
+
     }
 
     /**
@@ -103,6 +120,11 @@ class ControllerApoyoFamiliar extends Controller
      */
     public function destroy($id)
     {
-        //
+        $apoyo = create_apoyo_familiar::find($id);
+        $apoyo->delete();
+
+        Session::flash('message','Eliminado');
+        return redirect('listadoApoyoFamiliar');
+
     }
 }

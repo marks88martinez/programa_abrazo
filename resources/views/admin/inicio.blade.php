@@ -46,12 +46,12 @@
                 <span class="sSwitchIcon"></span>
             </a>
             <!-- secondary sidebar switch -->
-            <a href="#" id="sidebar_secondary_toggle" class="sSwitch sSwitch_right sidebar_secondary_check">
-                <span class="sSwitchIcon"></span>
-            </a>
+            {{--<a href="#" id="sidebar_secondary_toggle" class="sSwitch sSwitch_right sidebar_secondary_check">--}}
+                {{--<span class="sSwitchIcon"></span>--}}
+            {{--</a>--}}
             <div class="uk-navbar-flip">
                 <ul class="uk-navbar-nav user_actions">
-                    <li><a href="#" id="main_search_btn" class="user_action_icon"><i class="material-icons md-24 md-light">&#xE8B6;</i></a></li>
+                    {{--<li><a href="#" id="main_search_btn" class="user_action_icon"><i class="material-icons md-24 md-light">&#xE8B6;</i></a></li>--}}
 
 
                     <li data-uk-dropdown="{mode:'click'}">
@@ -161,10 +161,15 @@
                     Formularios
                 </a>
                 <ul>
+                    @if(Auth::user()->tipo_cargo == 2)
+
                     <li><a href="{{URL::to('/responsable')}}">Responsable</a></li>
                     <li><a href="{{URL::to('/educador')}}">Educador</a></li>
+                    @endif
                     <li><a href="{{URL::to('/nino')}}">Niño</a></li>
+                        @if(Auth::user()->tipo_cargo == 2)
                     <li><a href="{{URL::to('/listado')}}">Listado Educador</a></li>
+                        @endif
                     <li><a href="{{URL::to('/listadonino')}}">Listado Niño</a></li>
 
                 </ul>
@@ -395,6 +400,14 @@
         columns: [
             ["Santi", 2],
             ["Bobo", 50]
+        ]
+    }
+
+    var stackChart = {
+        columns:[
+            ["data1", -30, 200, 200, 400, -150, 250],
+            ["data2", 130, 100, -100, 200, -150, 50],
+            ["data3", -230, 200, 200, -300, 250, 250]
         ]
     }
 </script>

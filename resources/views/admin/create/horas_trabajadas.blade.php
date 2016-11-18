@@ -101,16 +101,29 @@
                     /*color: rgba(0,0,0,.54)*/
                 }
             </style>
-
-
-
+            {{--/////////////////////--}}
             <div class="md-fab-wrapper">
-                <a class="md-fab md-fab-primary" href="#" id="product_edit_submit">
-                    {{ Form::button('<i class="material-icons2"></i>', ['type' => 'submit', 'class' => 'material-icons2'] )  }}
+                <a class="md-fab md-fab-primary md-fab-actions" href="#"><i class="material-icons">&#xE0BE;</i></a>
+                <div class="md-fab-wrapper-small">
+                    {{--<a class="md-fab md-fab-small" href="#"><i class="material-icons">&#xE163;</i></a>--}}
+
+                    {{--{{ Form::button('<i class="material-icons"></i>', ['type' => 'submit', 'class' => 'md-fab md-fab-small md-fab-danger'] )  }}--}}
+                    {{ Form::button('<i class="material-icons"></i>', ['type' => 'submit', 'class' => 'md-fab md-fab-small md-fab-success'] )  }}
+
+                    <a class="md-fab md-fab-small md-fab-danger" href="{{route('horas_trabajo.edit',['id'=>$ninofuente->id_fuente_calle, 'fechainicio'=>$finicio,'fechafin'=>$ffin, 'pdf'=>'2'])}}"><i class="material-icons"></i></a>
+                    {{--<a class="md-fab md-fab-small md-fab-success" href="#"><i class="material-icons">&#xE149;</i></a>--}}
+                </div>
+            </div>
+            {{--/////////////////////--}}
+
+
+            {{--<div class="md-fab-wrapper">--}}
+                {{--<a class="md-fab md-fab-primary" href="#" id="product_edit_submit">--}}
+                    {{--{{ Form::button('<i class="material-icons2"></i>', ['type' => 'submit', 'class' => 'material-icons2'] )  }}--}}
                     {{--{!! Form::submit('Registrar',['class'=>'material-icons']) !!}--}}
                     {{--<i class="material-icons"></i>--}}
-                </a>
-            </div>
+                {{--</a>--}}
+            {{--</div>--}}
 
             <div class="uk-grid" data-uk-grid-margin="">
 

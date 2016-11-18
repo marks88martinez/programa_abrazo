@@ -70,20 +70,20 @@
                                                 </td>
                                                 <td>
                                                     <div class="uk-width-medium-1-6">
-                                                        <a class="md-btn md-btn-primary" href="#">Editar</a>
+                                                        {{--<a class="md-btn md-btn-primary" href="#">Editar</a>--}}
 
-                                                {{--<a> {!! link_to_route('listadonino.edit', $title = 'Editar', $parameters = $educador->datos_persona->id_datos_persona, $attributes = ['class'=>'md-btn md-btn-primary']) !!}</a>--}}
+                                                <a> {!! link_to_route('listadoFuenteCalle.edit', $title = 'Editar', $parameters = $nino->id_fuente_calle, $attributes = ['class'=>'md-btn md-btn-primary']) !!}</a>
 
                                                     </div>
                                                 </td>
                                                 <td>
                                                     <div class="uk-width-medium-1-6">
-                                                        <a class="md-btn md-btn-danger" href="#">Eliminar</a>
+                                                        {{--<a class="md-btn md-btn-danger" href="#">Eliminar</a>--}}
 
-                                                        {{--{!!Form::open(['route'=>['listadonino.destroy',$educador->datos_persona->id_datos_persona], 'method'=>'DELETE'])!!}--}}
+                                                        {!!Form::open(['route'=>['listadoFuenteCalle.destroy',$nino->id_fuente_calle], 'method'=>'DELETE'])!!}
 
-                                                        {{--{!! Form::submit('Eliminar ',['class'=>'md-btn md-btn-danger']) !!}--}}
-                                                        {{--{!!Form::close()!!}--}}
+                                                        {!! Form::submit('Eliminar ',['class'=>'md-btn md-btn-danger']) !!}
+                                                        {!!Form::close()!!}
                                                     </div>
                                                 </td>
                                             </tr>

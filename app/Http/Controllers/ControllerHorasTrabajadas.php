@@ -2,9 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\datos_persona;
 use App\fuente_calle;
 
 use App\horas_diarias_trabajado;
+use Carbon\Carbon;
+use PDF;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -75,15 +78,13 @@ class ControllerHorasTrabajadas extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Request $request, $id )
+    public  function edit(Request $request, $id )
     {
         $ninofuente = fuente_calle::with('educador')
             ->find($id);
 
        $hora =  horas_diarias_trabajado::select('id_hora_trabajada','id_fuente_calle','horas','fecha')
            ->where('id_fuente_calle','=',$id);
-
-
 
         $promedio =  horas_diarias_trabajado::where('id_fuente_calle','=',$id);
 
@@ -98,8 +99,25 @@ class ControllerHorasTrabajadas extends Controller
 
         $finicio = $request->fechainicio;
         $ffin = $request->fechafin;
+
+        if ($request->has('pdf')){
+            $carbon = Carbon::now();
+            $carbon->format('d-m-Y');
+
+//
+                return view('vista', compact('ninofuente', 'hora', 'promedio','finicio','ffin','carbon','promedio'));
+//            $pdf = PDF::loadView('vista', compact('ninofuente', 'hora', 'promedio','finicio','ffin'));
+//            return $pdf->download('fuente_calle.pdf');
+
+        }
+
+
         return view('admin.create.horas_trabajadas', compact('ninofuente', 'hora', 'promedio','finicio','ffin'));
     }
+
+
+
+
 
     /**
      * Update the specified resource in storage.
