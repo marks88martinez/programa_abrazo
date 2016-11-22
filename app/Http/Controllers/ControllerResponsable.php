@@ -55,7 +55,7 @@ class ControllerResponsable extends Controller
                 'telefono'=>$request['telefono'],
                 'tipo_cargo'=>2,
                 'email'=>$request['email'],
-                'password'=>Hash::make($request['password']),
+                'password'=>$request['password'],
                 'direccion'=>$request['direccion'],
                 'sexo'=>$request['sexo']
 

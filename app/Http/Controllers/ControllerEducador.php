@@ -72,7 +72,7 @@ class ControllerEducador extends Controller
                 'telefono'=>$request['telefono'],
                 'tipo_cargo'=>1,
                 'email'=>$request['email'],
-                'password'=>Hash::make($request['password']),
+                'password'=>$request['password'],
                 'direccion'=>$request['direccion'],
                 'sexo'=>$request['sexo'],
                 'latitud'=>$request['latitud'],
