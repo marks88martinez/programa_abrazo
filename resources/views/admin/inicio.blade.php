@@ -288,7 +288,7 @@
 <div id="page_content">
     <div id="page_content_inner">
 
-
+        @include('admin.alert.request')
     @include('admin.alert.success')
         @include('admin.alert.error')
    @yield('contenido')

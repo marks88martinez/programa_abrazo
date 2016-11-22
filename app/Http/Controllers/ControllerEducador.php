@@ -7,7 +7,7 @@ use App\educador;
 use App\responsable;
 use Illuminate\Http\Request;
 
-use App\Http\Requests;
+use App\Http\Requests\UserCreateRequest;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Session;
 
@@ -58,7 +58,7 @@ class ControllerEducador extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(UserCreateRequest $request)
     {
 //        dd($request->all());
 

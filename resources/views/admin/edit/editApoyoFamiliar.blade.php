@@ -5,9 +5,7 @@
         <div class="md-card-content">
 
             {!! Form::model($datos,['route'=>['apoyofamiliar.update',$datos], 'method'=>'PUT']) !!}
-            <script !src="">
-                var = $2y$10$x4OXftBvYa5oDS5Hp5APGuSa/b.UZFcZ53eNzQoJzk05QTrh18//e
-            </script>
+
 
             <h3 class="heading_a"><strong>SEGUIMIENTO FAMILIAR </strong></h3>
             <div class="uk-grid" data-uk-grid-margin="">
