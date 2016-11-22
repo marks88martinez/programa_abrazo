@@ -9,6 +9,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests\UserCreateRequest;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Session;
 
 class ControllerEducador extends Controller
@@ -71,7 +72,7 @@ class ControllerEducador extends Controller
                 'telefono'=>$request['telefono'],
                 'tipo_cargo'=>1,
                 'email'=>$request['email'],
-                'password'=>bcrypt($request['password']),
+                'password'=>Hash::make($request['password']),
                 'direccion'=>$request['direccion'],
                 'sexo'=>$request['sexo'],
                 'latitud'=>$request['latitud'],
