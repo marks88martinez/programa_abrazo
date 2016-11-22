@@ -4,6 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Support\Facades\Hash;
 
 class datos_persona extends Authenticatable
 {
@@ -25,6 +26,11 @@ class datos_persona extends Authenticatable
 
     public function scopeActiva($q){
         return $q->where('estado','=',1);
+    }
+    public function setPasswordAttribute($val){
+        if (!empty($val)){
+            $this->attributes['password']=Hash::make($val);
+        }
     }
 
 }

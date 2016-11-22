@@ -41,7 +41,7 @@
                             <div class="uk-width-medium-1-3">
                                 {{--<span class="uk-input-group-addon"><i class="uk-input-group-icon uk-icon-calendar"></i></span>--}}
                                 <label for="uk_dp_1">fecha de nacimiento:</label>
-                                {!! Form::text('fechanacimiento', null,['class'=>'md-input', 'id'=>'uk-width-medium-1-3', 'data-uk-datepicker'=>'{format:"DD.MM.YYYY"}','required']) !!}
+                                {!! Form::date('fechanacimiento', null,['class'=>'md-input', 'id'=>'uk-width-medium-1-3', 'data-uk-datepicker'=>'{format:"DD.MM.YYYY"}','required']) !!}
                                 {{--<input class="md-input" type="text" id="uk_dp_1" data-uk-datepicker="{format:'DD.MM.YYYY'}">--}}
 
 

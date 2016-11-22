@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\dato_nino;
 use App\datos_persona;
 use App\responsable;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -72,7 +73,30 @@ class ControllerListadoEducador extends Controller
     public function edit($id)
     {
         $datos = datos_persona::find($id);
-        return view('admin.edit.editEducador',['datos'=>$datos]);
+        $dat=Carbon::parse($datos->fechanacimiento)->format('Y-m-d');
+
+//        dd($dat);
+
+
+
+        $educadores = educador::find($id);
+
+
+        $responsables =  responsable::with('datos_persona')
+            ->activa()
+            ->get();
+
+        $resp = array();
+        $resp ['']='';
+
+        foreach ($responsables as $responsable)
+        {
+            $resp [$responsable->datos_persona->id_datos_persona] = $responsable->datos_persona->nombre.' - '.$responsable->datos_persona->ci;
+        }
+
+
+
+        return view('admin.edit.editEducador',['datos'=>$datos,'resp'=>$resp, 'educadores'=>$educadores,'dat'=>$dat]);
     }
 
     /**
@@ -86,26 +110,10 @@ class ControllerListadoEducador extends Controller
     {
 
 
-        $productos = datos_persona::find($id);
-        $productos->fill($request->all());
-        $productos->save();
 
-        if ($request->tipo_cargo == 2)
-        {
-            educador::create([
-                'id_datos_persona'=>$productos->id_datos_persona
-            ]);
-            $resp = responsable::find($id);
-            $resp->delete();
-        }elseif ($request->tipo_cargo == 1){
-            responsable::create([
-                'id_datos_persona'=>$productos->id_datos_persona
-            ]);
-            $edu = educador::find($id);
-            $edu->delete();
-        }
-
-
+        $persona = datos_persona::find($id);
+        $persona->fill($request->all());
+        $persona->save();
 
         Session::flash('message','Actualizado');
         return redirect('listado');
