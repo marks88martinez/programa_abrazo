@@ -48,7 +48,7 @@
                                                 <td>{{$educador->datos_persona->fechanacimiento}}</td>
                                                 <td>{{$educador->actividad}}</td>
                                                 <td>{{$educador->responsable}}</td>
-                                                <td>{{$educador->datos_persona->telefono}}td>
+                                                <td>{{$educador->datos_persona->telefono}}</td>
 
                                                 <td>{{$educador->datos_persona->direccion}}</td>
                                                 <td>
