@@ -394,24 +394,6 @@
     })();
 </script>
 
-<script>
-    var donutChart = {
-        title: "Trabajo por dia",
-        columns: [
-            ["Santi", 2],
-            ["Bobo", 50]
-        ]
-    }
-
-    var stackChart = {
-        columns:[
-            ["data1", -30, 200, 200, 400, -150, 250],
-            ["data2", 130, 100, -100, 200, -150, 50],
-            ["data3", -230, 200, 200, -300, 250, 250]
-        ]
-    }
-</script>
-
 <!-- inputmask-->
 {{--<script src="{{URL::to('bower_components/jquery.inputmask/dist/jquery.inputmask.bundle.min.js')}}"></script>--}}
 
@@ -446,7 +428,7 @@
 
 <!--  dashbord functions -->
 <script src="{{URL::to('assets/js/pages/dashboard.min.js')}}"></script>
-<script src="{{URL::to('assets/js/custom/graficos.js')}}"></script>
+
 <!-- page specific plugins -->
 <!-- ionrangeslider -->
 <script src="{{URL::to('bower_components/ionrangeslider/js/ion.rangeSlider.min.js')}}"></script>
