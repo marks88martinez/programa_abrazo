@@ -309,9 +309,14 @@
          */
         var setLocation;
         function initGeocoderSearchbar(map) {
+            function find(latLng) {
+                map.setCenter(latLng);
+                map.setZoom(20);
+                setMarker(map, latLng);
+            }
             setLocation = (function() {
                 return function(latLng) {
-                    map.setCenter(latLng);
+                    find(latLng);
                     $('#places-container').remove();
                 }
             })();
@@ -324,7 +329,7 @@
                             function (res) {
                                 res = res.results;
                                 if (res.length == 1) {
-                                    map.setCenter(res[0].geometry.location);
+                                    find(res[0].geometry.location);
                                 } else {
                                     var html = '<div id="places-container">';
                                     for (var i = 0; i < res.length; i++) {
@@ -339,7 +344,6 @@
                 }
             });
         }
-
         var markers = [];
         function mapClickHandler(latLng) {
             $('.latField').val(latLng.lat());
@@ -355,7 +359,7 @@
             for(var i= 0; i < markers.length; i++) {
                 deleteMarker(markers[i]);
             }
-            marker.addListener("rightclick", function() {
+            marker.addListener("dblclick", function() {
                 deleteMarker(marker);
                 $('.latField').val('');
                 $('.lngField').val('');

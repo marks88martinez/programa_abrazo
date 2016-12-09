@@ -288,12 +288,26 @@
 @section('js')
     <script src="{{ url('assets/js/gmap_geocoder.js') }}"></script>
     <script>
-
+        /***
+         * Funciones encargadas de la busqueda por geocode (direccion)
+         * Copiar la variable setLocation y la funcion initGeocoderSearchbar completa.
+         * Incluir el script gmap_geocoder.js como esta arriba.
+         * IMPORTANTE COPIAR EN EL MISMO ORDEN
+         *
+         * Copiar tambien el div con id "geocoder-searchbar-container"
+         * respetando la posicion dentro del contenedor md-card padre.
+         * La lista de resultados se genera por JavaScript de manera dinamica.
+         */
         var setLocation;
         function initGeocoderSearchbar(map) {
+            function find(latLng) {
+                map.setCenter(latLng);
+                map.setZoom(20);
+                setMarker(map, latLng);
+            }
             setLocation = (function() {
                 return function(latLng) {
-                    map.setCenter(latLng);
+                    find(latLng);
                     $('#places-container').remove();
                 }
             })();
@@ -306,7 +320,7 @@
                             function (res) {
                                 res = res.results;
                                 if (res.length == 1) {
-                                    map.setCenter(res[0].geometry.location);
+                                    find(res[0].geometry.location);
                                 } else {
                                     var html = '<div id="places-container">';
                                     for (var i = 0; i < res.length; i++) {
@@ -321,8 +335,6 @@
                 }
             });
         }
-
-
         var markers = [];
         function mapClickHandler(latLng) {
             $('.latField').val(latLng.lat());
@@ -338,7 +350,7 @@
             for(var i= 0; i < markers.length; i++) {
                 deleteMarker(markers[i]);
             }
-            marker.addListener("rightclick", function() {
+            marker.addListener("dblclick", function() {
                 deleteMarker(marker);
                 $('.latField').val('');
                 $('.lngField').val('');
