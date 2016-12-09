@@ -49,7 +49,7 @@ class Controlador_inicio extends Controller
 //        dd($dimensionesPorDia["2016-11-09"]->where('dimensiones_t', 2)[0]->cantidad);
         $fechas = $dimensionesPorDia->keys();
         $todColl = $dimensionesPorDia["2016-12-09"];
-        dd($todColl);
+//        dd($todColl);
         dd($todColl->where('fecha', "2016-12-09"));
         return view('admin.graficos', compact('horasPorDia', 'dimensiones', 'dimensionesPorDia', 'fechas'));
     }
