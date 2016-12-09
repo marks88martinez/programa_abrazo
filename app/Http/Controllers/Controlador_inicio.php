@@ -46,11 +46,7 @@ class Controlador_inicio extends Controller
             8 => "Responsabilidades para la no realización de ningún trabajo infantil"
         ];
         $dimensionesPorDia = $dimensionesPorDia->groupBy('fecha', 'asc');
-//        dd($dimensionesPorDia["2016-11-09"]->where('dimensiones_t', 2)[0]->cantidad);
         $fechas = $dimensionesPorDia->keys();
-        $todColl = $dimensionesPorDia["2016-12-09"];
-//        dd($todColl);
-        dd($todColl->where('dimensiones_t', "6"));
         return view('admin.graficos', compact('horasPorDia', 'dimensiones', 'dimensionesPorDia', 'fechas'));
     }
 
