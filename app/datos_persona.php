@@ -10,7 +10,7 @@ class datos_persona extends Authenticatable
 {
     protected $table = 'datos_persona';
     protected $primaryKey = 'id_datos_persona';
-    protected $fillable=['nombre','apellido','ci','tipo_cargo','fechanacimiento','telefono','tipo_cargo','email','password','direccion','sexo'];
+    protected $fillable=['nombre','apellido','ci','tipo_cargo','fechanacimiento','telefono','tipo_cargo','email','password','direccion','sexo', 'edad', 'longitud', 'latitud'];
     public $timestamps = false;
 
     public function educador(){
