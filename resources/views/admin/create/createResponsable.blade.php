@@ -183,6 +183,12 @@
                                                                 Mapa
                                                             </h3>
                                                         </div>
+
+                                                        <br>
+                                                        <div class="md-input-wrapper" id="geocoder-searchbar-container" style="display: none;"><label>Buscar Direccion:</label>
+                                                            {!! Form::text(null, null, ['class'=>'md-input', 'id'=> 'geocoder-searchbar']) !!}
+                                                            <span class="md-input-bar"></span>
+                                                        </div>
                                                         <div class="md-card-content">
                                                             <div class="uk-grid" data-uk-grid-margin>
                                                                 <div class="uk-width-1-1">
@@ -280,7 +286,43 @@
 
     @stop
 @section('js')
+    <script src="{{ url('assets/js/gmap_geocoder.js') }}"></script>
     <script>
+
+        var setLocation;
+        function initGeocoderSearchbar(map) {
+            setLocation = (function() {
+                return function(latLng) {
+                    map.setCenter(latLng);
+                    $('#places-container').remove();
+                }
+            })();
+            $('#geocoder-searchbar-container').show('fast');
+            $('#geocoder-searchbar').off('keypress').on('keypress', function (e) {
+                var keyCode = e.keyCode;
+                if (keyCode == 13) {
+                    e.preventDefault();
+                    geocoder($('#geocoder-searchbar').val(),
+                            function (res) {
+                                res = res.results;
+                                if (res.length == 1) {
+                                    map.setCenter(res[0].geometry.location);
+                                } else {
+                                    var html = '<div id="places-container">';
+                                    for (var i = 0; i < res.length; i++) {
+                                        html += '<p><input type="radio" onchange=\'setLocation(' + JSON.stringify(res[i].geometry.location) + ')\' name="geocoder_places" id="radio_demo_' + res[i].place_id + '" data-md-icheck />' +
+                                                '<label for="radio_demo_' + res[i].place_id + '" class="inline-label">' + res[i].formatted_address +'</label>' +
+                                                '</p>';
+                                    }
+                                    html += '</div>';
+                                    $(html).insertAfter('#geocoder-searchbar-container');
+                                }
+                            });
+                }
+            });
+        }
+
+
         var markers = [];
         function mapClickHandler(latLng) {
             $('.latField').val(latLng.lat());

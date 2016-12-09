@@ -226,6 +226,9 @@ $(function() {
                     e && !e.hasClass("data-md-selectize") && (e.addClass("data-md-selectize"), altair_forms.select_elements())
                 },
                 click: function(m, e) {
+                    if(initGeocoderSearchbar) {
+                        initGeocoderSearchbar(m);
+                    }
                     if(!mapClickHandler || !setMarker) {
                         throw new Error('mapClickHandler y/o setMarker no implementados');
                     }
