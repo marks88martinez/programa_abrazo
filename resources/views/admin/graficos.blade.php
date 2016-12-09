@@ -114,7 +114,7 @@
                 @foreach($dimensiones as $dimensionId => $dimension)
                         ["{{ $dimension }}"
                     @foreach($dimensionesPorDia as $fecha => $dimensionesPorFecha)
-                        , {{ count($dimensionesPorFecha->where('dimensiones_t', $dimensionId)) == 0 ? 0 : $dimensionesPorFecha->where('dimensiones_t', $dimensionId)->values()[0]->cantidad }}
+                        , {{ count($dimensionesPorFecha->whereLoose('dimensiones_t', (string)$dimensionId)) == 0 ? 0 : $dimensionesPorFecha->whereLoose('dimensiones_t', (string)$dimensionId)->values()[0]->cantidad }}
                     @endforeach
                 ],
                 @endforeach
