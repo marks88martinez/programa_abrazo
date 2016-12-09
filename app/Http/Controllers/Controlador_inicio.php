@@ -48,7 +48,7 @@ class Controlador_inicio extends Controller
         $dimensionesPorDia = $dimensionesPorDia->groupBy('fecha', 'asc');
 //        dd($dimensionesPorDia["2016-11-09"]->where('dimensiones_t', 2)[0]->cantidad);
         $fechas = $dimensionesPorDia->keys();
-        dd($dimensionesPorDia["2016-12-09"]->toArray()->where('dimensiones_t', 2));
+        dd(collect($dimensionesPorDia["2016-12-09"]->toArray())->where('dimensiones_t', 2));
         return view('admin.graficos', compact('horasPorDia', 'dimensiones', 'dimensionesPorDia', 'fechas'));
     }
 
