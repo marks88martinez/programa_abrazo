@@ -33,24 +33,9 @@ class ControllerEducador extends Controller
             $resp [$responsable->datos_persona->id_datos_persona] = $responsable->datos_persona->nombre.' - '.$responsable->datos_persona->ci;
         }
 
-        
-
-
-
-
       $educador = educador::with('datos_persona')->get();
 
       return view('admin.create.createEducador', compact('resp'));
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
     }
 
     /**
@@ -79,61 +64,13 @@ class ControllerEducador extends Controller
                 'longitud'=>$request['longitud'],
             ]);
 
-                educador::create([
-                    'id_datos_persona'=>$dpersona->id_datos_persona,
-                    'id_responsable'=>$request['id_responsable']
-
-                ]);
+            educador::create([
+                'id_datos_persona'=>$dpersona->id_datos_persona,
+                'id_responsable'=>$request['id_responsable']
+            ]);
         });
-
-
         Session::flash('message',' Registrado');
         return redirect('/educador');
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
     }
 
 }

@@ -24,10 +24,13 @@ class datos_persona extends Authenticatable
         return $this->hasOne('App\datos_nino','id_datos_persona', 'id_datos_persona');
     }
 
-    public function scopeActiva($q){
+    public function scopeActiva($q)
+    {
         return $q->where('estado','=',1);
     }
-    public function setPasswordAttribute($val){
+
+    public function setPasswordAttribute($val)
+    {
         if (!empty($val)){
             $this->attributes['password']=Hash::make($val);
         }
