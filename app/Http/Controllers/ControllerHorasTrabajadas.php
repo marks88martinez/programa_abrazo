@@ -105,9 +105,9 @@ class ControllerHorasTrabajadas extends Controller
             $carbon->format('d-m-Y');
 
 //
-                return view('vista', compact('ninofuente', 'hora', 'promedio','finicio','ffin','carbon','promedio'));
-//            $pdf = PDF::loadView('vista', compact('ninofuente', 'hora', 'promedio','finicio','ffin'));
-//            return $pdf->download('fuente_calle.pdf');
+             //   return view('vista', compact('ninofuente', 'hora', 'promedio','finicio','ffin','carbon','promedio'));
+            $pdf = PDF::loadView('vista', compact('ninofuente', 'hora', 'promedio','finicio','ffin', 'carbon','promedio'));
+            return $pdf->download('fuente_calle.pdf');
 
         }
 

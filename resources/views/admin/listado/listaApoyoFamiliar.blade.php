@@ -37,9 +37,9 @@
                                             <th>Visita Numero</th>
                                             <th>Etapa Seguimiento</th>
                                             <th>Dimesiones Trabajadas</th>
-                                            <th>Descripcion</th>
-                                            <th>Resultado</th>
-                                            <th>Acuerdo</th>
+                                            {{--<th>Descripcion</th>--}}
+                                            {{--<th>Resultado</th>--}}
+                                            {{--<th>Acuerdo</th>--}}
                                             <th>Proxima Visita</th>
 
                                             <th></th>
@@ -63,9 +63,9 @@
                                                 <td>{!! $etapa[$apoyos->etapa_seguimiento] !!}</td>
                                                 <td>{!! $dimension[$apoyos->dimensiones_t] !!}</td>
 
-                                                <td>{{$apoyos->Descripción}}</td>
-                                                <td>{{$apoyos->resultados}}</td>
-                                                <td>{{$apoyos->acuerdos}}</td>
+                                                {{--<td>{{$apoyos->Descripción}}</td>--}}
+                                                {{--<td>{{$apoyos->resultados}}</td>--}}
+                                                {{--<td>{{$apoyos->acuerdos}}</td>--}}
                                                 <td>{{$apoyos->proxima_visita}}</td>
 
 
@@ -83,7 +83,15 @@
                                                     <div class="uk-width-medium-1-6">
                                                         {{--<a class="md-btn md-btn-primary" href="#">Editar</a>--}}
 
-                                                <a> {!! link_to_route('apoyofamiliar.edit', $title = 'Editar', $parameters = $apoyos->id_apoyo_familiars, $attributes = ['class'=>'md-btn md-btn-primary']) !!}</a>
+                                                        <a> {!! link_to_route('apoyofamiliar.show', $title = 'PDF', $parameters = $apoyos->id_apoyo_familiars, $attributes = ['class'=>'md-btn md-btn-warning']) !!}</a>
+
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="uk-width-medium-1-6">
+                                                        {{--<a class="md-btn md-btn-primary" href="#">Editar</a>--}}
+
+                                                      <a> {!! link_to_route('apoyofamiliar.edit', $title = 'Editar', $parameters = $apoyos->id_apoyo_familiars, $attributes = ['class'=>'md-btn md-btn-primary']) !!}</a>
 
                                                     </div>
                                                 </td>

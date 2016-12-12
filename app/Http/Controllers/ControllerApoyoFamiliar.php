@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\create_apoyo_familiar;
+use PDF;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -36,7 +38,7 @@ class ControllerApoyoFamiliar extends Controller
      */
     public function create()
     {
-        //
+
     }
 
     /**
@@ -74,6 +76,18 @@ class ControllerApoyoFamiliar extends Controller
      */
     public function show($id)
     {
+        $apoyo = create_apoyo_familiar::with('educadores')
+            ->find($id);
+//        dd($apoyo);
+        $carbon = Carbon    ::now();
+        $carbon->format('d-m-Y');
+
+        $etapa = array('1'=>'1ra Etapa', '2'=>'2da Etapa','3'=>'3ra Etapa');
+        $dimension = array('1'=>'Identificación', '2'=>'Salud','3'=>'Educación','4'=>'Empleo/Ingresos','5'=>'Seguridad AlimentariaSaneamiento Básico','6'=>'Dinámica Familiar','7'=>' Habilitabilidad');
+
+        $pdf = PDF::loadView('vista_apoyofamiliar', compact('apoyo','etapa','dimension','carbon'));
+        return $pdf->download('ApoyoFamiliar.pdf');
+//        return view('vista_apoyofamiliar', compact('apoyo','etapa','dimension','carbon'));
 
 
     }
