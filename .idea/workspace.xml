@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8e7eb7e6-3cf4-462f-933a-cbe1e1aa1770" name="Default" comment="Agregado dd en graficos">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/vista_apoyofamiliar.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/ControllerApoyoFamiliar.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/ControllerApoyoFamiliar.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/ControllerHorasTrabajadas.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/ControllerHorasTrabajadas.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/listado/listaApoyoFamiliar.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/listado/listaApoyoFamiliar.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Controlador_inicio.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Controlador_inicio.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/graficos.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/graficos.blade.php" />
     </list>
     <ignored path="Project_SG.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -49,7 +46,7 @@
         <entry file="file://$PROJECT_DIR$/resources/views/vista_apoyofamiliar.blade.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="90">
-              <caret line="72" column="51" selection-start-line="72" selection-start-column="51" selection-end-line="72" selection-end-column="51" />
+              <caret line="102" column="63" selection-start-line="102" selection-start-column="63" selection-end-line="102" selection-end-column="63" />
               <folding />
             </state>
           </provider>
@@ -65,11 +62,43 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ControllerApoyoFamiliar.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ControllerApoyoFamiliar.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ControllerApoyoFamiliar.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-774">
+            <state relative-caret-position="-666">
               <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="routes.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="216">
+              <caret line="37" column="45" selection-start-line="37" selection-start-column="27" selection-end-line="37" selection-end-column="45" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Controlador_inicio.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Controlador_inicio.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="449">
+              <caret line="49" column="33" selection-start-line="49" selection-start-column="33" selection-end-line="49" selection-end-column="33" />
+              <folding>
+                <element signature="e#40#70#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="graficos.blade.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/admin/graficos.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="229">
+              <caret line="97" column="36" selection-start-line="97" selection-start-column="36" selection-end-line="97" selection-end-column="36" />
               <folding />
             </state>
           </provider>
@@ -80,26 +109,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="108">
               <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="8" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name=".env" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.env">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/app.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1440">
-              <caret line="80" column="28" selection-start-line="80" selection-start-column="26" selection-end-line="80" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -177,8 +186,6 @@
         <option value="$PROJECT_DIR$/public/assets/js/custom/graficos.js" />
         <option value="$PROJECT_DIR$/public/assets/js/gmap_geocoder.js" />
         <option value="$PROJECT_DIR$/public/assets/js/pages/plugins_google_maps.js" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Controlador_inicio.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/graficos.blade.php" />
         <option value="$PROJECT_DIR$/app/datos_persona.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/ControllerEducador.php" />
         <option value="$PROJECT_DIR$/public/assets/js/geocoder_script.js" />
@@ -191,6 +198,8 @@
         <option value="$PROJECT_DIR$/resources/views/admin/listado/listaApoyoFamiliar.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/vista_apoyofamiliar.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/ControllerApoyoFamiliar.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Controlador_inicio.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/graficos.blade.php" />
       </list>
     </option>
   </component>
@@ -313,214 +322,6 @@
               <option name="myItemId" value="resources" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="admin" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="listado" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Project_SG" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Project_SG" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="admin" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="edit" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Project_SG" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Project_SG" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="admin" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="create" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Project_SG" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Project_SG" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="admin" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="alert" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Project_SG" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Project_SG" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lang" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="en" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Project_SG" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Project_SG" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Project_SG" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Project_SG" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Project_SG" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Project_SG" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Project_SG" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Project_SG" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Project_SG" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Project_SG" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="database" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Project_SG" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Project_SG" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -586,7 +387,7 @@
     <property name="last_opened_file_path" value="/var/www/html/DuoSat" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js-jscs-nodeInterpreter" value="/usr/bin/node" />
-    <property name="SearchEverywhereHistoryKey" value="listadoed&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/app/Http/Controllers/ControllerListadoEducador.php&#10;route&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/app/Http/routes.php&#10;createEd&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/resources/views/admin/create/createEducador.blade.php&#10;controllereduca&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/app/Http/Controllers/ControllerEducador.php&#10;routes&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/app/Http/routes.php&#10;educador.php&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/app/educador.php&#10;controllerlis&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/app/Http/Controllers/ControllerListadoEducador.php&#10;control&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/app/Http/Controllers/ControllerEducador.php&#10;inicio.blade&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/resources/views/admin/inicio.blade.php&#10;createEducad&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/resources/views/admin/create/createEducador.blade.php&#10;grafi&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/public/assets/js/custom/graficos.js&#10;d3.min&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/public/bower_components/d3/d3.min.js&#10;horas_&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/resources/views/admin/create/horas_trabajadas.blade.php&#10;index&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/template/index.html&#10;inicio&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/resources/views/admin/inicio.blade.php&#10;graficos.&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/resources/views/admin/graficos.blade.php&#10;controlador&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/app/Http/Controllers/Controlador_inicio.php&#10;ControllerHorasTrabajadas&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/app/Http/Controllers/ControllerHorasTrabajadas.php&#10;ecommerce_product_details&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/template/ecommerce_product_details.html&#10;components_buttons&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/template/components_buttons.html&#10;gr&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/public/assets/js/custom/graficos.js&#10;plugins_charts&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/public/assets/js/pages/plugins_charts.min.js&#10;ini&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/resources/views/admin/inicio.blade.php&#10;auth&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/config/auth.php&#10;user.&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/app/User.php&#10;auth.php&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/config/auth.php&#10;kendoui_calendar&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/template/kendoui_calendar.html&#10;plugins_calendar&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/template/plugins_calendar.html&#10;page_settings&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/template/page_settings.html&#10;paginator&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/vendor/laravel/framework/src/Illuminate/Pagination/Paginator.php&#10;pagination&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/resources/lang/en/pagination.php&#10;Pa&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/resources/lang/en/pagination.php&#10;namespace&#9;null&#9;null&#10;Pagination&#9;null&#9;null&#10;Controlador_inicio&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/app/Http/Controllers/Controlador_inicio.php&#10;components_tabs&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/template/components_tabs.html&#10;components_common&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/template/components_common.html&#10;components_notifications&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/template/components_notifications.html&#10;forms_advanced&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/template/forms_advanced.html&#10;ControllerEducador&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/app/Http/Controllers/ControllerEducador.php&#10;plugins_google_maps&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/public/assets/js/pages/plugins_google_maps.min.js&#10;forms_regular&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/template/forms_regular.html&#10;kendoui_masked_input&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/template/kendoui_masked_input.html" />
+    <property name="SearchEverywhereHistoryKey" value="Controlador_inicio&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/app/Http/Controllers/Controlador_inicio.php&#10;route&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/app/Http/routes.php&#10;listadoed&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/app/Http/Controllers/ControllerListadoEducador.php&#10;createEd&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/resources/views/admin/create/createEducador.blade.php&#10;controllereduca&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/app/Http/Controllers/ControllerEducador.php&#10;routes&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/app/Http/routes.php&#10;educador.php&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/app/educador.php&#10;controllerlis&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/app/Http/Controllers/ControllerListadoEducador.php&#10;control&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/app/Http/Controllers/ControllerEducador.php&#10;inicio.blade&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/resources/views/admin/inicio.blade.php&#10;createEducad&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/resources/views/admin/create/createEducador.blade.php&#10;grafi&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/public/assets/js/custom/graficos.js&#10;d3.min&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/public/bower_components/d3/d3.min.js&#10;horas_&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/resources/views/admin/create/horas_trabajadas.blade.php&#10;index&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/template/index.html&#10;inicio&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/resources/views/admin/inicio.blade.php&#10;graficos.&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/resources/views/admin/graficos.blade.php&#10;controlador&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/app/Http/Controllers/Controlador_inicio.php&#10;ControllerHorasTrabajadas&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/app/Http/Controllers/ControllerHorasTrabajadas.php&#10;ecommerce_product_details&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/template/ecommerce_product_details.html&#10;components_buttons&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/template/components_buttons.html&#10;gr&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/public/assets/js/custom/graficos.js&#10;plugins_charts&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/public/assets/js/pages/plugins_charts.min.js&#10;ini&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/resources/views/admin/inicio.blade.php&#10;auth&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/config/auth.php&#10;user.&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/app/User.php&#10;auth.php&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/config/auth.php&#10;kendoui_calendar&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/template/kendoui_calendar.html&#10;plugins_calendar&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/template/plugins_calendar.html&#10;page_settings&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/template/page_settings.html&#10;paginator&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/vendor/laravel/framework/src/Illuminate/Pagination/Paginator.php&#10;pagination&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/resources/lang/en/pagination.php&#10;Pa&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/resources/lang/en/pagination.php&#10;namespace&#9;null&#9;null&#10;Pagination&#9;null&#9;null&#10;components_tabs&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/template/components_tabs.html&#10;components_common&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/template/components_common.html&#10;components_notifications&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/template/components_notifications.html&#10;forms_advanced&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/template/forms_advanced.html&#10;ControllerEducador&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/app/Http/Controllers/ControllerEducador.php&#10;plugins_google_maps&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/public/assets/js/pages/plugins_google_maps.min.js&#10;forms_regular&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/template/forms_regular.html&#10;kendoui_masked_input&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/template/kendoui_masked_input.html" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -749,7 +550,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="432732000" />
+    <option name="totallyTimeSpent" value="435240000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="49" y="52" width="1317" height="716" extended-state="0" />
@@ -918,20 +719,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/graficos.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="28">
-          <caret line="110" column="0" selection-start-line="110" selection-start-column="0" selection-end-line="110" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Controlador_inicio.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="82">
-          <caret line="48" column="45" selection-start-line="48" selection-start-column="45" selection-end-line="48" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/admin/edit/editApoyoFamiliar.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-3392">
@@ -971,13 +758,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="48">
           <caret line="22" column="4" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="26" column="57" selection-start-line="26" selection-start-column="32" selection-end-line="26" selection-end-column="57" />
         </state>
       </provider>
     </entry>
@@ -1133,6 +913,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ControllerHorasTrabajadas.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="37" column="45" selection-start-line="37" selection-start-column="27" selection-end-line="37" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ControllerApoyoFamiliar.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-666">
+          <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/admin/listado/listaApoyoFamiliar.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
@@ -1144,23 +948,25 @@
     <entry file="file://$PROJECT_DIR$/resources/views/vista_apoyofamiliar.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
-          <caret line="72" column="51" selection-start-line="72" selection-start-column="51" selection-end-line="72" selection-end-column="51" />
+          <caret line="102" column="63" selection-start-line="102" selection-start-column="63" selection-end-line="102" selection-end-column="63" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ControllerHorasTrabajadas.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Controlador_inicio.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="8" />
-          <folding />
+        <state relative-caret-position="449">
+          <caret line="49" column="33" selection-start-line="49" selection-start-column="33" selection-end-line="49" selection-end-column="33" />
+          <folding>
+            <element signature="e#40#70#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ControllerApoyoFamiliar.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/graficos.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-774">
-          <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
+        <state relative-caret-position="229">
+          <caret line="97" column="36" selection-start-line="97" selection-start-column="36" selection-end-line="97" selection-end-column="36" />
           <folding />
         </state>
       </provider>

@@ -16,8 +16,6 @@ class Controlador_inicio extends Controller
 
     public function index(){
 
-
-
     return view('login');
     }
 
@@ -45,8 +43,14 @@ class Controlador_inicio extends Controller
             7 => "Habitabilidad",
             8 => "Responsabilidades para la no realización de ningún trabajo infantil"
         ];
+
+
         $dimensionesPorDia = $dimensionesPorDia->groupBy('fecha', 'asc');
+//        dd($dimensionesPorDia);
         $fechas = $dimensionesPorDia->keys();
+
+
+//        dd($dimensionesPorDia);
         return view('admin.graficos', compact('horasPorDia', 'dimensiones', 'dimensionesPorDia', 'fechas'));
     }
 

@@ -81,6 +81,43 @@
 
 
 
+                    {{--************************************--}}
+                    <div class="container">
+                        <div class="md-card-fullscreen-content">
+                            <div class="uk-overflow-container">
+                                <h3 class="heading_a">Dimensiones trabajadas</h3>
+                                <table class="uk-table uk-table-no-border uk-text-nowrap">
+                                    <thead>
+                                    <tr>
+                                        <th>Fecha</th>
+                                        <th>Dimensiones Trabajadas</th>
+                                        <th>Cantidad</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    
+                                    @foreach($dimensionesPorDia as $dimensionPorDia)
+                                       @foreach($dimensionPorDia as $dimension)
+                                           <tr>
+                                               <td>{{ $dimension->fecha }}</td>
+                                               <td>{{ $dimensiones[$dimension->dimensiones_t] }}</td>
+                                               <td>{{ $dimension->cantidad }}</td>
+
+                                           </tr>
+                                       @endforeach
+                                    @endforeach
+                                    </tbody>
+                                </table>
+                            </div>
+                            {{--<p class="uk-margin-large-top uk-margin-small-bottom heading_list uk-text-success">Some Info:</p>--}}
+                            {{--<p class="uk-margin-top-remove">Vitae quia id sed dolores ut et molestiae repudiandae explicabo esse quidem repellat dolore perferendis ipsa ipsam molestias molestiae repudiandae soluta nesciunt non aut non cumque atque maiores ut nulla accusamus eos fugit adipisci sint corrupti quia autem nesciunt et soluta magni eligendi rerum et velit incidunt quis eos aut nam et quae amet excepturi voluptas ut vitae voluptates rerum tenetur officia tenetur ut delectus aperiam beatae optio ut dignissimos qui quibusdam laudantium ut non veniam nam voluptate unde est eius dolor iure voluptas ut explicabo ea in autem quis incidunt nisi recusandae pariatur sit voluptate facere vel quibusdam magni error earum dolores similique assumenda amet sunt nemo eveniet aut.</p>--}}
+                            {{----}}
+                        </div>
+                    </div>
+                    {{--************************************--}}
+
+
+
 
                 </div>
             </div>
