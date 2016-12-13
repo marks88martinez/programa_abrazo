@@ -2,26 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8e7eb7e6-3cf4-462f-933a-cbe1e1aa1770" name="Default" comment="Agregado dd en graficos">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/lang/es/auth.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/lang/es/pagination.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/lang/es/passwords.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/lang/es/validation.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/admin/edit/editResponsable.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/admin/graficos_cargo1.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Controlador_inicio.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Controlador_inicio.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/ControllerListadoEducador.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/ControllerListadoEducador.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/ControllerResponsable.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/ControllerResponsable.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/routes.php" afterPath="$PROJECT_DIR$/app/Http/routes.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/create_apoyo_familiar.php" afterPath="$PROJECT_DIR$/app/create_apoyo_familiar.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/dato_nino.php" afterPath="$PROJECT_DIR$/app/dato_nino.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/datos_persona.php" afterPath="$PROJECT_DIR$/app/datos_persona.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/educador.php" afterPath="$PROJECT_DIR$/app/educador.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/app.php" afterPath="$PROJECT_DIR$/config/app.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/js/pages/plugins_google_maps.js" afterPath="$PROJECT_DIR$/public/assets/js/pages/plugins_google_maps.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/create/createNino.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/create/createNino.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/graficos.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/graficos.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/listado/listaEducador.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/listado/listaEducador.blade.php" />
     </list>
     <ignored path="Project_SG.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -60,21 +41,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ControllerEducador.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ControllerEducador.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="46" column="43" selection-start-line="46" selection-start-column="26" selection-end-line="46" selection-end-column="43" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ControllerListadoResponsable.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ControllerListadoResponsable.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ControllerListadoResponsable.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="339">
-              <caret line="122" column="0" selection-start-line="122" selection-start-column="0" selection-end-line="122" selection-end-column="0" />
+            <state relative-caret-position="231">
+              <caret line="107" column="5" selection-start-line="107" selection-start-column="5" selection-end-line="107" selection-end-column="5" />
               <folding>
                 <element signature="e#40#62#0#PHP" expanded="true" />
               </folding>
@@ -82,21 +53,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="composer.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/composer.json">
+      <file leaf-file-name="ControllerNino.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ControllerNino.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="12" column="35" selection-start-line="12" selection-start-column="35" selection-end-line="12" selection-end-column="35" />
-              <folding />
+            <state relative-caret-position="-90">
+              <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
+              <folding>
+                <element signature="e#40#58#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="auth.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/lang/es/auth.php">
+      <file leaf-file-name="createNino.blade.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/admin/create/createNino.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="18" column="2" selection-start-line="18" selection-start-column="2" selection-end-line="18" selection-end-column="2" />
+            <state relative-caret-position="344">
+              <caret line="324" column="13" selection-start-line="324" selection-start-column="13" selection-end-line="324" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -127,6 +100,16 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="375">
               <caret line="148" column="2" selection-start-line="148" selection-start-column="2" selection-end-line="148" selection-end-column="2" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="createEducador.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/admin/create/createEducador.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="329" column="13" selection-start-line="300" selection-start-column="4" selection-end-line="329" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -197,7 +180,6 @@
         <option value="$PROJECT_DIR$/resources/views/admin/listado/listaApoyoFamiliar.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/vista_apoyofamiliar.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/ControllerApoyoFamiliar.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/create/createNino.blade.php" />
         <option value="$PROJECT_DIR$/public/assets/js/pages/plugins_google_maps.js" />
         <option value="$PROJECT_DIR$/app/create_apoyo_familiar.php" />
         <option value="$PROJECT_DIR$/app/dato_nino.php" />
@@ -218,6 +200,7 @@
         <option value="$PROJECT_DIR$/resources/lang/es/validation.php" />
         <option value="$PROJECT_DIR$/config/app.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/ControllerListadoResponsable.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/create/createNino.blade.php" />
       </list>
     </option>
   </component>
@@ -351,6 +334,32 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="listado" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Project_SG" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Project_SG" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="create" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -511,7 +520,7 @@
     <property name="last_opened_file_path" value="/var/www/html/DuoSat" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js-jscs-nodeInterpreter" value="/usr/bin/node" />
-    <property name="SearchEverywhereHistoryKey" value="route&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/app/Http/routes.php&#10;geocoder&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/public/assets/js/geocoder_script.js&#10;graficos.blade&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/resources/views/admin/graficos.blade.php&#10;ma&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/public/assets/js/pages/plugins_google_maps.js&#10;gra&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/public/assets/js/custom/graficos.js&#10;Controlador_inicio&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/app/Http/Controllers/Controlador_inicio.php&#10;listadoed&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/app/Http/Controllers/ControllerListadoEducador.php&#10;createEd&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/resources/views/admin/create/createEducador.blade.php&#10;controllereduca&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/app/Http/Controllers/ControllerEducador.php&#10;routes&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/app/Http/routes.php&#10;educador.php&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/app/educador.php&#10;controllerlis&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/app/Http/Controllers/ControllerListadoEducador.php&#10;control&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/app/Http/Controllers/ControllerEducador.php&#10;inicio.blade&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/resources/views/admin/inicio.blade.php&#10;createEducad&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/resources/views/admin/create/createEducador.blade.php&#10;grafi&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/public/assets/js/custom/graficos.js&#10;d3.min&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/public/bower_components/d3/d3.min.js&#10;horas_&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/resources/views/admin/create/horas_trabajadas.blade.php&#10;index&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/template/index.html&#10;inicio&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/resources/views/admin/inicio.blade.php&#10;graficos.&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/resources/views/admin/graficos.blade.php&#10;controlador&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/app/Http/Controllers/Controlador_inicio.php&#10;ControllerHorasTrabajadas&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/app/Http/Controllers/ControllerHorasTrabajadas.php&#10;ecommerce_product_details&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/template/ecommerce_product_details.html&#10;components_buttons&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/template/components_buttons.html&#10;gr&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/public/assets/js/custom/graficos.js&#10;plugins_charts&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/public/assets/js/pages/plugins_charts.min.js&#10;ini&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/resources/views/admin/inicio.blade.php&#10;auth&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/config/auth.php&#10;user.&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/app/User.php&#10;auth.php&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/config/auth.php&#10;kendoui_calendar&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/template/kendoui_calendar.html&#10;plugins_calendar&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/template/plugins_calendar.html&#10;page_settings&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/template/page_settings.html&#10;paginator&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/vendor/laravel/framework/src/Illuminate/Pagination/Paginator.php&#10;pagination&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/resources/lang/en/pagination.php&#10;Pa&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/resources/lang/en/pagination.php&#10;namespace&#9;null&#9;null&#10;Pagination&#9;null&#9;null&#10;components_tabs&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/template/components_tabs.html&#10;components_common&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/template/components_common.html&#10;components_notifications&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/template/components_notifications.html&#10;forms_advanced&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/template/forms_advanced.html&#10;ControllerEducador&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/app/Http/Controllers/ControllerEducador.php&#10;plugins_google_maps&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/public/assets/js/pages/plugins_google_maps.min.js&#10;forms_regular&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/template/forms_regular.html&#10;kendoui_masked_input&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/template/kendoui_masked_input.html" />
+    <property name="SearchEverywhereHistoryKey" value="createNino&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/resources/views/admin/create/createNino.blade.php&#10;route&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/app/Http/routes.php&#10;geocoder&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/public/assets/js/geocoder_script.js&#10;graficos.blade&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/resources/views/admin/graficos.blade.php&#10;ma&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/public/assets/js/pages/plugins_google_maps.js&#10;gra&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/public/assets/js/custom/graficos.js&#10;Controlador_inicio&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/app/Http/Controllers/Controlador_inicio.php&#10;listadoed&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/app/Http/Controllers/ControllerListadoEducador.php&#10;createEd&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/resources/views/admin/create/createEducador.blade.php&#10;controllereduca&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/app/Http/Controllers/ControllerEducador.php&#10;routes&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/app/Http/routes.php&#10;educador.php&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/app/educador.php&#10;controllerlis&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/app/Http/Controllers/ControllerListadoEducador.php&#10;control&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/app/Http/Controllers/ControllerEducador.php&#10;inicio.blade&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/resources/views/admin/inicio.blade.php&#10;createEducad&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/resources/views/admin/create/createEducador.blade.php&#10;grafi&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/public/assets/js/custom/graficos.js&#10;d3.min&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/public/bower_components/d3/d3.min.js&#10;horas_&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/resources/views/admin/create/horas_trabajadas.blade.php&#10;index&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/template/index.html&#10;inicio&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/resources/views/admin/inicio.blade.php&#10;graficos.&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/resources/views/admin/graficos.blade.php&#10;controlador&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/app/Http/Controllers/Controlador_inicio.php&#10;ControllerHorasTrabajadas&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/app/Http/Controllers/ControllerHorasTrabajadas.php&#10;ecommerce_product_details&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/template/ecommerce_product_details.html&#10;components_buttons&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/template/components_buttons.html&#10;gr&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/public/assets/js/custom/graficos.js&#10;plugins_charts&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/public/assets/js/pages/plugins_charts.min.js&#10;ini&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/resources/views/admin/inicio.blade.php&#10;auth&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/config/auth.php&#10;user.&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/app/User.php&#10;auth.php&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/config/auth.php&#10;kendoui_calendar&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/template/kendoui_calendar.html&#10;plugins_calendar&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/template/plugins_calendar.html&#10;page_settings&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/template/page_settings.html&#10;paginator&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/vendor/laravel/framework/src/Illuminate/Pagination/Paginator.php&#10;pagination&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/resources/lang/en/pagination.php&#10;Pa&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/resources/lang/en/pagination.php&#10;namespace&#9;null&#9;null&#10;Pagination&#9;null&#9;null&#10;components_tabs&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/template/components_tabs.html&#10;components_common&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/template/components_common.html&#10;components_notifications&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/template/components_notifications.html&#10;forms_advanced&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/template/forms_advanced.html&#10;ControllerEducador&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/app/Http/Controllers/ControllerEducador.php&#10;plugins_google_maps&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/public/assets/js/pages/plugins_google_maps.min.js&#10;forms_regular&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/template/forms_regular.html&#10;kendoui_masked_input&#9;FILE&#9;file:///home/mark/Escritorio/Project_SG/template/kendoui_masked_input.html" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -670,12 +679,12 @@
       <workItem from="1481308291303" duration="2426000" />
       <workItem from="1481542892288" duration="12552000" />
       <workItem from="1481560570122" duration="7000" />
-      <workItem from="1481630703587" duration="5843000" />
+      <workItem from="1481630703587" duration="8097000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="446036000" />
+    <option name="totallyTimeSpent" value="448290000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="49" y="52" width="1317" height="716" extended-state="0" />
@@ -725,13 +734,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/responsable.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/assets/js/gmap_geocoder.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
@@ -858,13 +860,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/create/createNino.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="197" column="62" selection-start-line="194" selection-start-column="55" selection-end-line="197" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/assets/js/pages/plugins_google_maps.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
@@ -876,14 +871,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="346">
           <caret line="64" column="1" selection-start-line="11" selection-start-column="0" selection-end-line="64" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/create/createEducador.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5436">
-          <caret line="302" column="12" selection-start-line="302" selection-start-column="12" selection-end-line="302" selection-end-column="12" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1108,11 +1095,37 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ControllerListadoResponsable.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
-          <caret line="122" column="0" selection-start-line="122" selection-start-column="0" selection-end-line="122" selection-end-column="0" />
+        <state relative-caret-position="231">
+          <caret line="107" column="5" selection-start-line="107" selection-start-column="5" selection-end-line="107" selection-end-column="5" />
           <folding>
             <element signature="e#40#62#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ControllerNino.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-90">
+          <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
+          <folding>
+            <element signature="e#40#58#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/create/createEducador.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="329" column="13" selection-start-line="300" selection-start-column="4" selection-end-line="329" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/create/createNino.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="344">
+          <caret line="324" column="13" selection-start-line="324" selection-start-column="13" selection-end-line="324" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>

@@ -296,35 +296,31 @@
     <script src="{{ url('assets/js/gmap_geocoder.js') }}"></script>
     <script src="{{ url('assets/js/geocoder_script.js') }}"></script>
     <script>
-        var donutChart = {
-            title: "",
-            columns: [
-                    @foreach($horasPorDia as $fecha)
-                ["{{ $fecha->fechaFormateada }}", {{ $fecha->horas }}],
-                @endforeach
-            ]
-        };
+        var markers = [];
+        function mapClickHandler(latLng) {
+            $('.latField').val(latLng.lat());
+            $('.lngField').val(latLng.lng());
+        }
 
-        var stackChart = {
-            columns:[
-                    @foreach($dimensiones as $dimensionId => $dimension)
-                ["{{ $dimension }}"
-                    @foreach($dimensionesPorDia as $fecha => $dimensionesPorFecha)
-                    , {{ count($dimensionesPorFecha->whereLoose('dimensiones_t', (string)$dimensionId)) == 0 ? 0 : $dimensionesPorFecha->whereLoose('dimensiones_t', (string)$dimensionId)->values()[0]->cantidad }}
-                    @endforeach
-                ],
-                @endforeach
-            ],
-            labels: [
-                    @foreach($fechas as $index => $fecha)
-                {
-                    value: {{ $index }},
-                    text: "{{ \Carbon\Carbon::createFromFormat('Y-m-d', $fecha)->format('d/m/Y') }}"
-                },
-                @endforeach
-            ]
-        };
-        stackChart.groups = stackChart.columns.map(function(arr) { return arr[0]; });
+        function setMarker(map, latLng) {
+            var marker = new google.maps.Marker({
+                position: latLng,
+                map: map
+            });
+            map.setCenter(latLng);
+            for(var i= 0; i < markers.length; i++) {
+                deleteMarker(markers[i]);
+            }
+            marker.addListener("dblclick", function() {
+                deleteMarker(marker);
+                $('.latField').val('');
+                $('.lngField').val('');
+            });
+            markers.push(marker);
+        }
+
+        function deleteMarker(marker) {
+            marker.setMap(null);
+        }
     </script>
-    <script src="{{URL::to('assets/js/custom/graficos.js')}}"></script>
 @stop
