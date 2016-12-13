@@ -77,8 +77,6 @@ class ControllerListadoEducador extends Controller
 
 //        dd($dat);
 
-
-
         $educadores = educador::find($id);
 
 

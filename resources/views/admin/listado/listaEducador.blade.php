@@ -128,18 +128,18 @@
                                                 <td>{{$educador->datos_persona->nombre}}</td>
                                                 <td>{{$educador->datos_persona->apellido}}</td>
                                                 <td>{{$educador->datos_persona->fechanacimiento}}</td>
-                                                <td>{{$educador->datos_persona->tipo_cargo?'Responsable':'sin cargo'}}</td>
+                                                {{--<td>{{$educador->datos_persona->tipo_cargo?'Responsable':'sin cargo'}}</td>--}}
                                                 <td>{{$educador->datos_persona->telefono}}</td>
                                                 <td>{{$educador->datos_persona->email}}</td>
                                                 <td>{{$educador->datos_persona->direccion}}</td>
                                                 <td>
                                                     <div class="uk-width-medium-1-6">
-                                                        <a> {!! link_to_route('listado.edit', $title = 'Editar', $parameters = $educador->datos_persona->id_datos_persona, $attributes = ['class'=>'md-btn md-btn-primary']) !!}</a>
+                                                        <a> {!! link_to_route('listadoresponsable.edit', $title = 'Editar', $parameters = $educador->datos_persona->id_datos_persona, $attributes = ['class'=>'md-btn md-btn-primary']) !!}</a>
                                                     </div>
                                                 </td>
                                                 <td>
                                                     <div class="uk-width-medium-1-6">
-                                                        {!!Form::open(['route'=>['listado.destroy',$educador->datos_persona->id_datos_persona], 'method'=>'DELETE'])!!}
+                                                        {!!Form::open(['route'=>['listadoresponsable.destroy',$educador->datos_persona->id_datos_persona], 'method'=>'DELETE'])!!}
 
                                                         {!! Form::submit('Eliminar ',['class'=>'md-btn md-btn-danger']) !!}
                                                         {!!Form::close()!!}

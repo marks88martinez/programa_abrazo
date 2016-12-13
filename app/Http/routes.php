@@ -25,6 +25,7 @@ Route::group(['middleware'=>['auth']],function(){
     Route::resource('horas_trabajo','ControllerHorasTrabajadas');
 
     Route::resource('/listado','ControllerListadoEducador');
+    Route::resource('/listadoresponsable','ControllerListadoResponsable');
     Route::resource('/listadonino','ControllerListadoNino');
     Route::resource('/listadoFuenteCalle','ControllerListadoFuenteCalle');
     Route::resource('/listadoApoyoFamiliar','ControllerListadoApoyoFamiliar');

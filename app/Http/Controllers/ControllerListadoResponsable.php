@@ -5,15 +5,13 @@ namespace App\Http\Controllers;
 use App\datos_persona;
 use App\educador;
 use App\responsable;
-use Illuminate\Database\QueryException;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
-use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Hash;
-use Session;
+use Illuminate\Support\Facades\Session;
 
-class ControllerResponsable extends Controller
+class ControllerListadoResponsable extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -22,8 +20,7 @@ class ControllerResponsable extends Controller
      */
     public function index()
     {
-
-        return view('admin.create.createResponsable');
+        //
     }
 
     /**
@@ -33,8 +30,7 @@ class ControllerResponsable extends Controller
      */
     public function create()
     {
-
-
+        //
     }
 
     /**
@@ -43,43 +39,9 @@ class ControllerResponsable extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Requests\CreateUsuarioRequest $request)
+    public function store(Request $request)
     {
-        dd($request);
-
-            DB::transaction(function() use ($request){
-                $dpersona = datos_persona::create([
-                    'nombre'=>$request['nombre'],
-                    'apellido'=>$request['apellido'],
-                    'ci'=>$request['ci'],
-                    'fechanacimiento'=>$request['fechanacimiento'],
-                    'telefono'=>$request['telefono'],
-                    'tipo_cargo'=>2,
-                    'email'=>$request['email'],
-                    'password'=>$request['password'],
-                    'direccion'=>$request['direccion'],
-                    'sexo'=>$request['sexo']
-
-                ]);
-
-                responsable::create([
-                    'id_datos_persona'=>$dpersona->id_datos_persona
-                ]);
-
-
-
-
-            });
-
-
-
-
-
-
-
-
-        Session::flash('message',' Registrado');
-        return redirect('/responsable');
+        //
     }
 
     /**
@@ -101,7 +63,29 @@ class ControllerResponsable extends Controller
      */
     public function edit($id)
     {
-        //
+        $datos = datos_persona::find($id);
+        $dat=Carbon::parse($datos->fechanacimiento)->format('Y-m-d');
+
+//        dd($dat);
+
+        $educadores = educador::find($id);
+
+
+//        $responsables =  responsable::with('datos_persona')
+//            ->activa()
+//            ->get();
+//
+//        $resp = array();
+//        $resp ['']='';
+//
+//        foreach ($responsables as $responsable)
+//        {
+//            $resp [$responsable->datos_persona->id_datos_persona] = $responsable->datos_persona->nombre.' - '.$responsable->datos_persona->ci;
+//        }
+
+
+
+        return view('admin.edit.editResponsable',['datos'=>$datos, 'educadores'=>$educadores,'dat'=>$dat]);
     }
 
     /**
@@ -113,7 +97,14 @@ class ControllerResponsable extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+
+        $persona = datos_persona::find($id);
+        $persona->fill($request->all());
+        $persona->save();
+
+        Session::flash('message','Actualizado');
+        return redirect('listado');
+
     }
 
     /**
@@ -124,6 +115,8 @@ class ControllerResponsable extends Controller
      */
     public function destroy($id)
     {
-        //
+        datos_persona::where('id_datos_persona','=',$id)->update(array('estado'=>2));
+        Session::flash('message-error','Eliminado');
+        return redirect('listado');
     }
 }

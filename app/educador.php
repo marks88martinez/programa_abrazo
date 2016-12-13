@@ -22,6 +22,12 @@ class educador extends Model
     public function datos_persona(){
         return $this->belongsTo('App\datos_persona', 'id_datos_persona','id_datos_persona');
     }
+
+    public function fuenteCalle()
+    {
+        return $this->hasMany('App\fuente_calle', 'ideducador', 'id_datos_persona');
+    }
+
     public function scopeActiva($q){
         return $q->whereHas('datos_persona',function ($w){
            $w->activa();

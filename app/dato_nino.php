@@ -15,8 +15,6 @@ class dato_nino extends Model
         return $this->belongsTo('App\datos_persona', 'id_datos_persona','id_datos_persona');
     }
 
-
-
     public function scopeActiva($q){
         return $q->whereHas('datos_persona',function ($w){
             $w->activa();

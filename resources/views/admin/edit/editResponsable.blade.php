@@ -4,15 +4,15 @@
 
     <div class="md-card">
         <div class="md-card-content">
-            {!! Form::open(['route'=>'nino.store', 'method'=>'POST']) !!}
+            {!! Form::model($datos,['route'=>['listadoresponsable.update', $datos], 'method'=>'PUT']) !!}
 
 
-            <h3 class="heading_a">Niño</h3>
+            <h3 class="heading_a">Educador</h3>
             <div class="uk-grid" data-uk-grid-margin="">
                 <div class="uk-width-row">
                     <div class="uk-form-row">
                         <div class="md-input-wrapper"><label>Nombre:</label>
-                            {!!Form::text('nombre',null,['class'=>'md-input','required'])  !!}
+                            {!!Form::text('nombre',$datos->nombre,['class'=>'md-input','required'])  !!}
 
 
                             <span class="md-input-bar"></span></div>
@@ -20,7 +20,7 @@
                     </div>
                     <div class="uk-form-row">
                         <div class="md-input-wrapper"><label>Apellido:</label>
-                            {!! Form::text('apellido',null, ['class'=>'md-input','required']) !!}
+                            {!! Form::text('apellido',$datos->apellido, ['class'=>'md-input','required']) !!}
 
                             <span class="md-input-bar"></span></div>
 
@@ -28,34 +28,7 @@
 
                     <div class="uk-form-row">
                         <div class="md-input-wrapper"><label>CI:</label>
-                            {!! Form::text('ci',null, ['class'=>'md-input']) !!}
-
-                            <span class="md-input-bar"></span></div>
-
-                    </div>
-
-
-                    <div class="uk-form-row">
-                        <div class="md-input-wrapper"><label>Edad:</label>
-                            {!! Form::text('edad',null, ['class'=>'md-input']) !!}
-
-                            <span class="md-input-bar"></span></div>
-
-                    </div>
-
-
-
-                    <div class="uk-form-row">
-                        <div class="md-input-wrapper"><label>Actividad:</label>
-                            {!! Form::text('actividad',null, ['class'=>'md-input']) !!}
-
-                            <span class="md-input-bar"></span></div>
-
-                    </div>
-
-                    <div class="uk-form-row">
-                        <div class="md-input-wrapper"><label>Responsable:</label>
-                            {!! Form::text('responsable',null, ['class'=>'md-input']) !!}
+                            {!! Form::text('ci',$datos->ci, ['class'=>'md-input','required']) !!}
 
                             <span class="md-input-bar"></span></div>
 
@@ -68,7 +41,7 @@
                             <div class="uk-width-medium-1-3">
                                 {{--<span class="uk-input-group-addon"><i class="uk-input-group-icon uk-icon-calendar"></i></span>--}}
                                 <label for="uk_dp_1">fecha de nacimiento:</label>
-                                {!! Form::text('fechanacimiento', null,['class'=>'md-input', 'id'=>'uk-width-medium-1-3', 'data-uk-datepicker'=>'{format:"DD.MM.YYYY"}']) !!}
+                                {!! Form::date('fechanacimiento',$dat,['class'=>'md-input', 'id'=>'uk-width-medium-1-3', 'data-uk-datepicker'=>'{format:"DD.MM.YYYY"}','required']) !!}
                                 {{--<input class="md-input" type="text" id="uk_dp_1" data-uk-datepicker="{format:'DD.MM.YYYY'}">--}}
 
 
@@ -79,7 +52,7 @@
                     <div class="uk-form-row">
 
                         <div class="md-input-wrapper"><label>Telefono:</label>
-                            {!! Form::text('telefono',null, ['class'=>'md-input']) !!}
+                            {!! Form::text('telefono',$datos->telefono, ['class'=>'md-input']) !!}
                             {{--<input type="text" class="md-input">--}}
                             <span class="md-input-bar"></span></div>
 
@@ -88,33 +61,65 @@
 
 
 
+                    {{--pimera columna--}}
+                    {{--<div class="uk-form-row">--}}
+                        {{--<div class="uk-grid uk-grid-width-1-1 uk-grid-width-medium-1" data-uk-grid-margin>--}}
+                            {{--<div>--}}
+                                {{--<label for="settings_time_format" class="uk-form-label">Responsable</label>--}}
+                                {{--{!! Form::select('id_responsable', $resp ,$educadores->id_responsable,['data-md-selectize'=>'','id'=>'settings_time_format','required']) !!}--}}
+                            {{--</div>--}}
+                            {{--<div>--}}
+                            {{--<label for="settings_date_format" class="uk-form-label">CI:</label>--}}
+                            {{--{!!Form::text('nombre',null,['class'=>'md-input','required'])  !!}--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
+                    {{--fin primera columna--}}
 
 
-
-
-
-                    <div class="uk-form-row">
+                    {{--<div class="uk-form-row">--}}
                       {{-- ACA SELEC--}}
 
 
+                        {{--<h3 class="heading_a">Cargo</h3>--}}
+                        {{--<div class="uk-grid" data-uk-grid-margin>--}}
+                            {{--<div class="uk-width-row">--}}
+                                {{--{!! Form::select('tipo_cargo', array('1' => 'Responsable', '2' => 'Educador'),null,['data-md-selectize'=>'','id'=>'select_demo_1']) !!}--}}
 
+                            {{--</div>--}}
 
+                        {{--</div>--}}
+
+                    {{--</div>--}}
+
+                    <div class="uk-form-row">
+                        <div class="md-input-wrapper"><label>Email:</label>
+                            {!! Form::email('email',$datos->email, ['class'=>'md-input','required']) !!}
+
+                            <span class="md-input-bar"></span></div>
+
+                    </div>
+
+                    <div class="uk-form-row">
+                        <div class="md-input-wrapper"><label>Passsword:</label>
+                            {!! Form::password('password', ['class'=>'md-input']) !!}
+                            <span class="md-input-bar"></span></div>
 
                     </div>
 
                                 <div class="uk-form-row" data-uk-grid-margin>
-                                    <h3 class="heading_a">Sexo</h3>
+                                    <h3 class="heading_a">Sexo</h3
                                     <div class="uk-width-medium-2-5">
                                         <p>
 
-                                                {!! Form::radio('sexo', 'H', null,['id'=>'radio_demo_1','data-md-icheck'=>'','checked']) !!}
+                                                {!! Form::radio('sexo', 'H', $datos->sexo == 'H',['id'=>'radio_demo_1','data-md-icheck'=>'','checked']) !!}
                                             {{--<input type="radio" name="radio_demo" id="radio_demo_1" data-md-icheck />--}}
                                             <label for="radio_demo_1" class="inline-label">Hombre</label>
                                         </p>
 
                                         <p>
 
-                                            {!! Form::radio('sexo', 'M', null,['id'=>'radio_demo_2','data-md-icheck'=>'']) !!}
+                                            {!! Form::radio('sexo', 'M', $datos->sexo == 'M',['id'=>'radio_demo_2','data-md-icheck'=>'']) !!}
                                             {{--<input type="radio" name="radio_demo" id="radio_demo_1" data-md-icheck />--}}
                                             <label for="radio_demo_1" class="inline-label">Mujer</label>
                                         </p>
@@ -125,7 +130,7 @@
 
                                     <div class="uk-form-row">
                                         <div class="md-input-wrapper"><label>Direccion:</label>
-                                            {!! Form::text('direccion',null, ['class'=>'md-input']) !!}
+                                            {!! Form::text('direccion',$datos->direccion, ['class'=>'md-input']) !!}
 
                                             <span class="md-input-bar"></span></div>
 
@@ -214,24 +219,26 @@
 
 
                                 </div>
-                    <div class="uk-form-row">
 
-                        <div class="md-input-wrapper md-input-filled"><label>Latitud:</label>
-                            {!! Form::text('latitud',null, ['class'=>'md-input latField', 'readonly' => '']) !!}
-                            {{--<input type="text" class="md-input">--}}
-                            <span class="md-input-bar"></span></div>
-
-                    </div>
-
-                    <div class="uk-form-row">
-
-                        <div class="md-input-wrapper md-input-filled"><label>Longitud:</label>
-                            {!! Form::text('longitud',null, ['class'=>'md-input lngField', 'readonly' => '']) !!}
-                            {{--<input type="text" class="md-input">--}}
-                            <span class="md-input-bar"></span></div>
-
-                    </div>
             </div>
+                <br>
+                <div class="uk-form-row">
+
+                    <div class="md-input-wrapper md-input-filled"><label>Latitud:</label>
+                        {!! Form::text('latitud',$datos->latitud, ['class'=>'md-input latField', 'readonly' => '']) !!}
+                        {{--<input type="text" class="md-input">--}}
+                        <span class="md-input-bar"></span></div>
+
+                </div>
+
+                <div class="uk-form-row">
+
+                    <div class="md-input-wrapper md-input-filled"><label>Longitud:</label>
+                        {!! Form::text('longitud',$datos->longitud, ['class'=>'md-input lngField', 'readonly' => '']) !!}
+                        {{--<input type="text" class="md-input">--}}
+                        <span class="md-input-bar"></span></div>
+
+                </div>
 
         </div>
 
@@ -293,38 +300,53 @@
 
     @stop
 @section('js')
+
     <script src="{{ url('assets/js/gmap_geocoder.js') }}"></script>
     <script src="{{ url('assets/js/geocoder_script.js') }}"></script>
     <script>
-        var donutChart = {
-            title: "",
-            columns: [
-                    @foreach($horasPorDia as $fecha)
-                ["{{ $fecha->fechaFormateada }}", {{ $fecha->horas }}],
-                @endforeach
-            ]
-        };
+        var markers = [];
+        function mapClickHandler(latLng) {
+            $('.latField').val(latLng.lat());
+            $('.lngField').val(latLng.lng());
+        }
 
-        var stackChart = {
-            columns:[
-                    @foreach($dimensiones as $dimensionId => $dimension)
-                ["{{ $dimension }}"
-                    @foreach($dimensionesPorDia as $fecha => $dimensionesPorFecha)
-                    , {{ count($dimensionesPorFecha->whereLoose('dimensiones_t', (string)$dimensionId)) == 0 ? 0 : $dimensionesPorFecha->whereLoose('dimensiones_t', (string)$dimensionId)->values()[0]->cantidad }}
-                    @endforeach
-                ],
-                @endforeach
-            ],
-            labels: [
-                    @foreach($fechas as $index => $fecha)
-                {
-                    value: {{ $index }},
-                    text: "{{ \Carbon\Carbon::createFromFormat('Y-m-d', $fecha)->format('d/m/Y') }}"
-                },
-                @endforeach
-            ]
-        };
-        stackChart.groups = stackChart.columns.map(function(arr) { return arr[0]; });
+        function setMarker(map, latLng) {
+            var marker = new google.maps.Marker({
+                position: latLng,
+                map: map
+            });
+            map.setCenter(latLng);
+            for(var i= 0; i < markers.length; i++) {
+                deleteMarker(markers[i]);
+            }
+            marker.addListener("dblclick", function() {
+                deleteMarker(marker);
+                $('.latField').val('');
+                $('.lngField').val('');
+            });
+            markers.push(marker);
+        }
+
+        function deleteMarker(marker) {
+            marker.setMap(null);
+        }
     </script>
-    <script src="{{URL::to('assets/js/custom/graficos.js')}}"></script>
+@stop
+
+@section('js2')
+    <script >
+        //        $(document).ready(function(){
+        $('.uk-form-row input').each(function(){
+            if( $(this).val().length != 0 ) {
+                $(this).parent().addClass('md-input-filled');
+
+            }
+
+        })
+
+
+
+
+        //        })
+    </script>
 @stop

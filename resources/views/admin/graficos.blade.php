@@ -3,7 +3,6 @@
 
 
 
-
     <div class="uk-grid">
         <div class="uk-width-1-1">
             <div class="md-card">
@@ -95,7 +94,7 @@
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    
+
                                     @foreach($dimensionesPorDia as $dimensionPorDia)
                                        @foreach($dimensionPorDia as $dimension)
                                            <tr>
@@ -126,16 +125,11 @@
     {{--////////////////////////////////////--}}
 
 
-
-
-
-
-
-
     {{--////////////////////////--}}
     
 @stop
 @section('js')
+
     <script>
         var donutChart = {
             title: "",
@@ -169,3 +163,13 @@
     </script>
     <script src="{{URL::to('assets/js/custom/graficos.js')}}"></script>
 @stop
+
+
+
+
+
+
+
+
+
+

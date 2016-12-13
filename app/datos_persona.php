@@ -10,12 +10,15 @@ class datos_persona extends Authenticatable
 {
     protected $table = 'datos_persona';
     protected $primaryKey = 'id_datos_persona';
-    protected $fillable=['nombre','apellido','ci','tipo_cargo','fechanacimiento','telefono','tipo_cargo','email','password','direccion','sexo', 'edad', 'longitud', 'latitud'];
+    protected $fillable=['nombre','apellido','ci','tipo_cargo','fechanacimiento','telefono',
+        'tipo_cargo','email','password','direccion','sexo', 'edad', 'longitud', 'latitud'];
     public $timestamps = false;
 
-    public function educador(){
+    public function educador()
+    {
         return $this->hasOne('App\educador','id_datos_persona', 'id_datos_persona');
     }
+
     public function responsable(){
         return $this->hasOne('App\responsable','id_datos_persona', 'id_datos_persona');
     }

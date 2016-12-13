@@ -8,8 +8,8 @@ var marker_url = isHighDensity() ? "assets/img/md-images/ic_place_black_48dp.png
     LocsA = [{
       lat: -25.493327518374674,
       lon: -54.74171018612007,
-        title: "ciudad del Este",
-        html: ['<div class="gmap-info-window"><h3 class="uk-text-nowrap">Heading A</h3><p>Lorem ipsum dolor sit&hellip;</p></div>'].join(),
+        title: "Ciudad del Este",
+        html: ['<div class="gmap-info-window"><h3 class="uk-text-nowrap">Ciudad del Este</h3><p></p></div>'].join(),
         icon: {
             url: marker_url_beenhere,
             size: marker_size,
@@ -20,8 +20,8 @@ var marker_url = isHighDensity() ? "assets/img/md-images/ic_place_black_48dp.png
     {
         lat: -25.53333,
         lon: -54.61667,
-        title: "Precidente Franco",
-        html: ['<div class="gmap-info-window"><h3 class="uk-text-nowrap">Heading B</h3><p>Lorem ipsum dolor sit&hellip;</p></div>'].join(""),
+        title: "Presidente Franco",
+        html: ['<div class="gmap-info-window"><h3 class="uk-text-nowrap">Presidente Franco</h3><p></p></div>'].join(""),
         icon: {
             url: marker_url_history,
             size: marker_size,

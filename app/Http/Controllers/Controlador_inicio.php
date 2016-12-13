@@ -25,6 +25,14 @@ class Controlador_inicio extends Controller
 //        dd($ver);
     }
     public function inicio(){
+        if (auth()->user()->tipo_cargo == 1) {
+            $fuenteCalles = auth()->user()->educador->fuenteCalle()->with(['dato_nino' => function($q) {
+                $q->select('id_datos_persona');
+            }, 'dato_nino.datos_persona' => function($q) {
+                $q->select('id_datos_persona', 'nombre', 'apellido', 'longitud', 'latitud');
+            }])->get();
+            return view('admin.graficos_cargo1', ['fuenteCalles' => $fuenteCalles]);
+        }
         $horasPorDia = horas_diarias_trabajado::groupBy('fecha')
             ->orderBy('fecha', 'asc')
             ->limit(7)
