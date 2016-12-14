@@ -51,7 +51,7 @@
             var locations = [
                     @foreach($fuenteCalles as $fuenteCalle)
                 {
-                    nombre: '{{ $fuenteCalle->dato_nino->datos_persona->nombre . $fuenteCalle->dato_nino->datos_persona->apellido }}',
+                    nombre: '{{ $fuenteCalle->dato_nino->datos_persona->nombre . ' ' . $fuenteCalle->dato_nino->datos_persona->apellido }}',
                     position: {
                         lat: Number({{ $fuenteCalle->dato_nino->datos_persona->latitud }}),
                         lng: Number({{ $fuenteCalle->dato_nino->datos_persona->longitud }})
