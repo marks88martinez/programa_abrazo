@@ -61,15 +61,17 @@
             ];
 
             for (var i = 0; i < locations.length; i++) {
-                var marker = new google.maps.Marker({
-                    position: locations[i].position,
-                    map: map
-                });
-                var infoWindow = new google.maps.InfoWindow({
-                    content : locations[i].nombre,
-                    position: locations[i].position
-                });
-                infoWindow.open(map, marker);
+                if (locations[i].position.lng != 0 && locations[i].position.lat != 0) {
+                    var marker = new google.maps.Marker({
+                        position: locations[i].position,
+                        map: map
+                    });
+                    var infoWindow = new google.maps.InfoWindow({
+                        content : locations[i].nombre,
+                        position: locations[i].position
+                    });
+                    infoWindow.open(map, marker);
+                }
             }
         }
     </script>
