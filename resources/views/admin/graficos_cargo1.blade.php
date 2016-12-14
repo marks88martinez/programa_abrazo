@@ -41,26 +41,35 @@
         </div>
 @stop
 @section('js')
-    <script>
+    <script type="text/javascript">
+        var loaded = false;
         function initGeocoderSearchbar(map) {
+            if (loaded) {
+                return false;
+            }
+            loaded = !loaded;
             var locations = [
                     @foreach($fuenteCalles as $fuenteCalle)
                 {
                     nombre: '{{ $fuenteCalle->dato_nino->datos_persona->nombre . $fuenteCalle->dato_nino->datos_persona->apellido }}',
-                    lat: {{ $fuenteCalle->dato_nino->datos_persona->latitud }},
-                    lng: {{ $fuenteCalle->dato_nino->datos_persona->longitud }}
-                }
+                    position: {
+                        lat: Number({{ $fuenteCalle->dato_nino->datos_persona->latitud }}),
+                        lng: ({{ $fuenteCalle->dato_nino->datos_persona->longitud }})
+                    }
+                },
                     @endforeach
             ];
 
             for (var i = 0; i < locations.length; i++) {
-                new google.maps.InfoWindow({
+                var marker = new google.maps.Marker({
+                    position: locations[i].position,
+                    map: map
+                });
+                var infoWindow = new google.maps.InfoWindow({
                     content : locations[i].nombre,
-                    position: {
-                        lat : locations[0].lat,
-                        lng : locations[0].lng
-                    }
-                }).open(map);
+                    position: locations[i].position
+                });
+                infoWindow.open(map, marker);
             }
         }
     </script>

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\create_apoyo_familiar;
+use App\dato_nino;
 use App\datos_persona;
 use App\horas_diarias_trabajado;
 use Illuminate\Http\Request;
@@ -26,7 +27,12 @@ class Controlador_inicio extends Controller
     }
     public function inicio(){
         if (auth()->user()->tipo_cargo == 1) {
-            $fuenteCalles = auth()->user()->educador->fuenteCalle()->with(['dato_nino' => function($q) {
+            $fuenteCalles = auth()->user()->educador
+                ->fuenteCalle()
+                ->whereHas('dato_nino', function($q) {
+                    $q->activa();
+                })
+                ->with(['dato_nino' => function($q) {
                 $q->select('id_datos_persona');
             }, 'dato_nino.datos_persona' => function($q) {
                 $q->select('id_datos_persona', 'nombre', 'apellido', 'longitud', 'latitud');

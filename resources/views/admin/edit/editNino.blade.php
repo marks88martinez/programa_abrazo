@@ -293,7 +293,7 @@
 
 
     @stop
-@section('js2')
+@section('js')
 
     <script src="{{ url('assets/js/gmap_geocoder.js') }}"></script>
     <script src="{{ url('assets/js/geocoder_script.js') }}"></script>
@@ -327,19 +327,17 @@
     </script>
 @stop
 
-
-@section('js')
+@section('js2')
     <script >
         //        $(document).ready(function(){
-        $('.uk-width-row input').each(function(){
+        $('.uk-form-row input').each(function(){
             if( $(this).val().length != 0 ) {
                 $(this).parent().addClass('md-input-filled');
 
             }
 
-        })
+        });
 
         //        })
     </script>
 @stop
-
